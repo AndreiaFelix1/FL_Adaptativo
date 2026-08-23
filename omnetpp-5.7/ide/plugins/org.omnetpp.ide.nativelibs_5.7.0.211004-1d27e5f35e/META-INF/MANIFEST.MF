@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Bundle-ManifestVersion: 2
+Bundle-Name: OMNeT++ Native library plug-in
+Bundle-SymbolicName: org.omnetpp.ide.nativelibs
+Bundle-Version: 5.7.0.211004-1d27e5f35e
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: OpenSim Ltd.
+Eclipse-BundleShape: dir
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.swt,org.eclipse.jfa
+ ce
+Export-Package: org.omnetpp.common.engine,org.omnetpp.common.engineext,o
+ rg.omnetpp.eventlog.engine,org.omnetpp.layout.engine,org.omnetpp.ned.en
+ gine,org.omnetpp.scave.engine,org.omnetpp.scave.engineext
+

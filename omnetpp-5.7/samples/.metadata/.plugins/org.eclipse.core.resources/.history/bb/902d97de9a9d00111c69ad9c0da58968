@@ -1,0 +1,38 @@
+import veins.modules.messages.DemoSafetyMessage;
+
+packet FlexeMessage extends veins::BaseFrame1609_4 {
+	int senderID = -1;
+    string model;
+    long msgId;
+    string dataset;
+    string scenario;
+    int seed;
+    bool nonIID;
+    int idModel;
+    bool trainFlag;
+    bool dynamicEpoch = false;
+    int numClients;
+    double percentDataset;
+    int numExamples;
+    int modelVersion;
+    string clientSelection;
+    double loss;
+    double accuracy;
+    
+    double precision;
+    double recall;        // Sensibilidade (Recall)
+    double f1Score;
+    double mcc;           // Matthews Correlation Coefficient
+    double aucRoc;        // Área sob a curva ROC
+    
+    // Matriz de Confusão (Geralmente enviamos os componentes básicos)
+    int tp; // True Positives
+    int fp; // False Positives
+    int tn; // True Negatives
+    int fn; // False Negatives
+    double entropy;
+    double computationCapability;
+    double computationRequirement;
+    double roundDeadline;
+    string color;
+}

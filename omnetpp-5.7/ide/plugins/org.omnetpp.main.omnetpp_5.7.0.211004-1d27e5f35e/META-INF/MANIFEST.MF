@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Bundle-ManifestVersion: 2
+Bundle-Name: OMNeT++ Product definition
+Bundle-SymbolicName: org.omnetpp.main.omnetpp;singleton:=true
+Bundle-Version: 5.7.0.211004-1d27e5f35e
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: OpenSim Ltd.
+Fragment-Host: org.omnetpp.main;bundle-version="5.1.0"
+Require-Bundle: org.eclipse.cdt.managedbuilder.core;resolution:=optional
+Eclipse-BundleShape: dir
+

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+  <launch>
+   <copy file="cologne2.net.xml">
+   </copy>
+   <copy file="new_routes100.rou.xml">
+   </copy>
+   <copy file="vtypes.add.xml">
+   </copy>
+   <copy file="cologne100.sumo.cfg" type="config">
+   </copy>
+  </launch>

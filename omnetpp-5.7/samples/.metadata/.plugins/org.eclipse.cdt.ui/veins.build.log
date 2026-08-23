@@ -1,0 +1,8 @@
+02:48:21 **** Incremental Build of configuration gcc-release for project veins ****
+make MODE=release -j8 all 
+make[1]: Entering directory '/home/flexe/veins-veins-5.2/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/flexe/veins-veins-5.2/src'
+
+02:48:21 Build Finished. 0 errors, 0 warnings. (took 657ms)
+

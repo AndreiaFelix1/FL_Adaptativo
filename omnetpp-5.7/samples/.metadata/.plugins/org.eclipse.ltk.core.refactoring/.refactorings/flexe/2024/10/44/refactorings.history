@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;flexe/simulations/grid/omnetpp_lust.ini&apos; to &apos;omnetpp_without_obstacles.ini&apos;" description="Rename resource &apos;omnetpp_lust.ini&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="simulations/grid/omnetpp_lust.ini" name="omnetpp_without_obstacles.ini" stamp="1730134192388" updateReferences="true"/>
+</session>

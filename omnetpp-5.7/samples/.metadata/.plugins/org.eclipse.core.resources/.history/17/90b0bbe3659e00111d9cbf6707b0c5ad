@@ -1,0 +1,426 @@
+#include "MLApp.h"
+
+#include <fstream>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <filesystem>
+
+#include <sstream>
+#include <vector>
+
+
+using namespace veins;
+using namespace flexe;
+
+Define_Module(MLApp);
+
+long MLApp::globalMessageCounter = 0;
+
+void MLApp::initialize(int stage){
+    DemoBaseApplLayer::initialize(stage);
+    if (stage == 0) {
+
+        resultsDir = "/home/flexe/PyFlexe/results/Comunicacao";
+        // Cria os diretórios um por um (ignora erro se já existir)
+        mkdir("/home/flexe/PyFlexe/results", 0777);
+        mkdir("/home/flexe/PyFlexe/results/Comunicacao", 0777);
+
+        self = getParentModule()->getIndex();
+        vehicleLogFile = resultsDir + "/vehicle_" + std::to_string(self) + ".txt";
+
+
+        self = getParentModule()->getIndex();
+        
+        epochs = par("epochs").intValue();
+        batch = par("batch").intValue();
+        speedZero = par("speedZero").boolValue();
+        computationCapability = par("computationCapability").doubleValue();
+        computationCapability = computationCapability*(pow(10, 9));
+
+        address = par("address").stringValue();
+
+        datasetUsedUpdateMetric = registerSignal("datasetUsedUpdate");
+        datasetTrainUpdateMetric = registerSignal("datasetUsedTrain");
+        datasetEvaluateUpdateMetric = registerSignal("datasetUsedEvaluate");
+        trainLatencyMetric = registerSignal("trainLatency");
+        compCapabilityMetric = registerSignal("compCapability");
+        lossTrainMetric = registerSignal("lossTrain");
+        accuracyTrainMetric = registerSignal("accuracyTrain");
+        lossEvaluateMetric = registerSignal("lossEvaluate");
+        accuracyEvaluateMetric = registerSignal("accuracyEvaluate");
+        lossUpdateMetric = registerSignal("lossUpdate");
+        accuracyUpdateMetric = registerSignal("accuracyUpdate");
+
+        dataset2Number["MNIST"] = 1;
+        dataset2Number["FMNIST"] = 2;
+        dataset2Number["CIFAR10"] = 3;
+        dataset2Number["CIFAR100"] = 4;
+        dataset2Number["Motion-Sense"] = 5;
+        dataset2Number["UCI-HAR"] = 6;
+        dataset2Number["SIGN"] = 7;
+        dataset2Number["Argoverse2"] = 8;
+        dataset2Number["CORL2017"] = 9;
+        dataset2Number["ColisaoFederada"] = 10;
+
+        emit(compCapabilityMetric, (double)computationCapability);
+    }
+    else if (stage == 1) {
+
+        //scheduleAt(simTime() + 0.1, sendBeaconEvt);
+
+
+        chArgs.SetMaxReceiveMessageSize(-1);
+        chArgs.SetMaxSendMessageSize(-1);
+        chArgs.SetGrpclbFallbackTimeout(7200000);
+        client = new FlexeClient(grpc::CreateCustomChannel(address, grpc::InsecureChannelCredentials(), chArgs));
+        computationRequirement = -1;
+        modelVersion = -1;
+        accuracyModel = -1;
+        lossModel = 9999.0;
+        numExamples = -1;
+        entropy = -1;
+    }
+}
+
+MLApp::~MLApp(){
+    cancelAndDelete(trainLocalModelEvt);
+    cancelAndDelete(sendResourceRequestEvt);
+    delete client;
+}
+
+void MLApp::finish(){
+    DemoBaseApplLayer::finish();
+}
+
+void MLApp::onBSM(DemoSafetyMessage* bsm){
+
+    switch(bsm->getKind()){
+    case SEND_BEACON_EVT:{
+        break;
+    }
+    default:{
+        //std::cout << self << " - (onBSM) The message type was not detected. " << bsm->getKind() << endl;
+        //std::cout << "\n" << endl;
+        break;
+    }
+    }
+}
+
+void MLApp::onWSM(BaseFrame1609_4* wsm){
+
+
+    FlexeMessage* flexe_msg = dynamic_cast<FlexeMessage*>(wsm);
+        int sender = flexe_msg ? flexe_msg->getSenderID() : -1; // -1 se não for FlexeMessage
+
+        // Log de Recebimento: node que enviou, id da mensagem (Kind), tempo de recebimento
+        long msgId = -1;
+        if (flexe_msg) {
+            msgId = flexe_msg->getMsgId();
+        }
+
+        logToFile("REC | From: " + std::to_string(sender) +
+                  " | MsgID: " + std::to_string(msgId) +
+                  " | Time: " + std::to_string(simTime().dbl()));
+
+
+    switch(wsm->getKind()){
+    case SEND_GLOBAL_MODEL_EVT:{
+        FlexeMessage* flexe_msg = check_and_cast<FlexeMessage*>(wsm);
+    std::cout << self << " - (VEH|onWSM) SEND_GLOBAL_MODEL_EVT - Position: " << traciVehicle->getVehiclePosition() << " Selected Clients: " << flexe_msg->getClientSelection() << " " << simTime().dbl() << endl;
+        std::vector<std::string> selectedClientsVector = client->splitSTR(flexe_msg->getClientSelection(), ';');
+        trainFlag = false;
+
+        for(std::vector<std::string>::iterator it  = selectedClientsVector.begin(); it != selectedClientsVector.end(); it++){
+            if(std::to_string(self) == *it){
+                std::cout << self << " - (VEH|onWSM) " << self << " == "<< *it << endl;
+                trainFlag = true;
+                break;
+            }
+        }
+
+        if(trainFlag == true){
+            model = flexe_msg->getModel();
+            dataset = flexe_msg->getDataset();
+            scenario = flexe_msg->getScenario();
+            seed = flexe_msg->getSeed();
+            nonIID = flexe_msg->getNonIID();
+            idModel = flexe_msg->getIdModel();
+            numClients = flexe_msg->getNumClients();
+            percentDataset = flexe_msg->getPercentDataset();
+            modelVersion = flexe_msg->getModelVersion();
+            computationRequirement = flexe_msg->getComputationRequirement();
+            colorDataset = flexe_msg->getColor();
+            dynamicEpoch = flexe_msg->getDynamicEpoch();
+            roundDeadline = flexe_msg->getRoundDeadline();
+            findHost()->getDisplayString().setTagArg("i", 1, colorDataset.c_str());
+            scheduleAt(simTime() + 0.01, trainLocalModelEvt);
+        }else{ 
+            std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) = client->update_model(self, flexe_msg->getModel(), flexe_msg->getDataset(), flexe_msg->getScenario(), flexe_msg->getSeed(), flexe_msg->getNonIID(), flexe_msg->getIdModel(), trainFlag, epochs, batch, flexe_msg->getNumClients(), flexe_msg->getPercentDataset(), "", "");
+            emit(datasetUsedUpdateMetric, dataset2Number[flexe_msg->getDataset()]);
+            emit(lossUpdateMetric, (double)lossModel);
+            emit(accuracyUpdateMetric, (double)accuracyModel);           
+            //std::cout << self << " - (VEH|handleSelfMsg) Update Accuracy: " << accuracyModel << " Loss: " << lossModel << " N. Examples: " << numExamples << endl;
+        }
+        //std::cout << "\n" << endl;
+
+        //CLEAR DATA STRUCTURES
+        selectedClientsVector.clear();
+        //CLEAR DATA STRUCTURES
+        break;
+    }
+    case SEND_LOCAL_MODEL_EVT:{
+        break;
+    }
+    case RESOURCE_REQUEST_EVT:{
+        //std::cout << self << " - (VEH|onWSM) RESOURCE_REQUEST_EVT " << simTime().dbl() << endl;
+        FlexeMessage* flexe_msg = check_and_cast<FlexeMessage*>(wsm);
+        std::vector<std::string> clientResourceVector = client->splitSTR(flexe_msg->getClientSelection(), ';');
+        resourceFlag = false;
+        for(std::vector<std::string>::iterator it  = clientResourceVector.begin(); it != clientResourceVector.end(); it++){
+            if(std::to_string(self) == *it){
+                //std::cout << self << " - (VEH|onWSM) " << self << " == "<< *it << endl;
+                resourceFlag = true;
+                break;
+            }
+        }
+        if(resourceFlag == true){
+            scheduleAt(simTime() + 0.01, sendResourceRequestEvt);
+        }
+        //CLEAR DATA STRUCTURES
+        clientResourceVector.clear();
+        //CLEAR DATA STRUCTURES
+        break;
+    }
+    default:{
+        //std::cout << self << " - (onWSM) The message type was not detected. " << wsm->getKind() << endl;
+        //std::cout << "\n" << endl;
+        break;
+    }
+    }
+}
+
+void MLApp::onWSA(DemoServiceAdvertisment* wsa){
+}
+
+void MLApp::handleSelfMsg(cMessage* msg) {
+    switch (msg->getKind()) {
+
+        case SEND_BEACON_EVT: {
+            DemoSafetyMessage* bsm = new DemoSafetyMessage();
+            populateWSM(bsm);
+
+            std::string sendID = traciVehicle->getVehicleId() + ";" + std::to_string(self);
+            bsm->setName(sendID.c_str());
+            bsm->setSpeed(traciVehicle->getSpeed());
+
+            double maxSpeed = traci->lane(traciVehicle->getLaneId()).getMaxSpeed();
+            bsm->setMaxSpeed(maxSpeed);
+            bsm->setModelVersion(modelVersion);
+            bsm->setLoss(lossModel);
+            bsm->setComputationCapability(computationCapability);
+
+            long uniqueMsgId = ++globalMessageCounter;
+            bsm->setMsgId(uniqueMsgId);
+
+
+            sendDown(bsm);
+            scheduleAt(simTime() + beaconInterval, sendBeaconEvt);
+
+            logToFile("SENT | MsgID: " + std::to_string(uniqueMsgId) +
+                      " | Time: " + std::to_string(simTime().dbl()));
+            break;
+        }
+
+        case TRAIN_LOCAL_MODEL_EVT: {
+
+
+            if (dynamicEpoch) {
+                epochs = 1;
+                std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) = client->fit(self, model, dataset, scenario, seed, nonIID, idModel, trainFlag, epochs, batch, numClients, percentDataset, "", "");
+
+                epochs = std::floor((roundDeadline * computationCapability) / (double(numExamples) * computationRequirement));
+                if (epochs <= 0) epochs = 1;
+
+                std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) = client->fit(self, model, dataset, scenario, seed, nonIID, idModel, trainFlag, epochs, batch, numClients, percentDataset, "", "dynamicEpoch");
+                epochs = std::stoi(client->splitSTR(client->splitSTR(outputMSG, ';')[1], '=')[1]);
+            } else {
+                epochs = par("epochs").intValue();
+                std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) = client->fit(self, model, dataset, scenario, seed, nonIID, idModel, trainFlag, epochs, batch, numClients, percentDataset, "", "");
+            }
+
+            modelSize = std::stod(client->splitSTR(client->splitSTR(outputMSG, ';')[0], '=')[1]);
+
+            emit(datasetTrainUpdateMetric, dataset2Number[dataset.c_str()]);
+            emit(lossTrainMetric, (double)lossModel);
+            emit(accuracyTrainMetric, (double)accuracyModel);
+
+            //std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) = client->evaluate(self, model, dataset, scenario, seed, nonIID, idModel, trainFlag, epochs, batch, numClients, percentDataset, "", "");
+
+
+
+            // ===================== AVALIAÇÃO COM MÉTRICAS COMPLETAS =====================
+
+            std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) =
+                client->evaluate(self, model, dataset, scenario, seed, nonIID,
+                                 idModel, trainFlag, epochs, batch,
+                                 numClients, percentDataset, "", "");
+
+            // ===================== EXTRAIR MÉTRICAS DO PYTHON =====================
+
+            double precision = 0.0;
+            double recall = 0.0;
+            double f1 = 0.0;
+            double mcc = 0.0;
+            double roc_auc = 0.0;
+
+            std::vector<std::string> metrics = client->splitSTR(outputMSG, ';');
+
+            for (auto &m : metrics) {
+                if (m.find("precision=") != std::string::npos)
+                    precision = std::stod(client->splitSTR(m, '=')[1]);
+
+                if (m.find("recall=") != std::string::npos)
+                    recall = std::stod(client->splitSTR(m, '=')[1]);
+
+                if (m.find("f1=") != std::string::npos)
+                    f1 = std::stod(client->splitSTR(m, '=')[1]);
+
+                if (m.find("mcc=") != std::string::npos)
+                    mcc = std::stod(client->splitSTR(m, '=')[1]);
+
+                if (m.find("roc_auc=") != std::string::npos)
+                    roc_auc = std::stod(client->splitSTR(m, '=')[1]);
+            }
+
+            // ===================== EMITIR MÉTRICAS COMO SIGNAL =====================
+
+            emit(lossEvaluateMetric, (double)lossModel);
+            emit(accuracyEvaluateMetric, (double)accuracyModel);
+
+            // ===================== SALVAR EM ARQUIVO DO VEÍCULO =====================
+
+            logToFile(
+                "METRICS | Time: " + std::to_string(simTime().dbl()) +
+                " | Precision: " + std::to_string(precision) +
+                " | Recall: " + std::to_string(recall) +
+                " | F1: " + std::to_string(f1) +
+                " | MCC: " + std::to_string(mcc) +
+                " | ROC_AUC: " + std::to_string(roc_auc)
+            );
+
+            // ============================================================================
+            emit(datasetEvaluateUpdateMetric, dataset2Number[dataset.c_str()]);
+            emit(lossEvaluateMetric, (double)lossModel);
+            emit(accuracyEvaluateMetric, (double)accuracyModel);           
+            
+            trainingLatency = ((double(numExamples) * computationRequirement) / computationCapability) * epochs;
+            if (dynamicEpoch) trainingLatency += uniform(0, 0.01);
+
+            emit(trainLatencyMetric, (double)trainingLatency);
+
+            // Criando e enviando o modelo local
+            FlexeMessage* flexe_msg = new FlexeMessage();
+            DemoBaseApplLayer::populateWSM(flexe_msg);
+            long uniqueMsgId = ++globalMessageCounter;
+            flexe_msg->setKind(SEND_LOCAL_MODEL_EVT);
+            flexe_msg->setMsgId(uniqueMsgId);
+            flexe_msg->setSendTime(simTime().dbl());
+
+            flexe_msg->setSenderID(self);
+            flexe_msg->setModel(model.c_str());
+            flexe_msg->setDataset(dataset.c_str());
+            flexe_msg->setScenario(scenario.c_str());
+            flexe_msg->setSeed(seed);
+            flexe_msg->setNonIID(nonIID);
+            flexe_msg->setNumExamples(numExamples);
+            flexe_msg->setIdModel(idModel);
+            flexe_msg->setModelVersion(modelVersion);
+            flexe_msg->setLoss(lossModel);
+            flexe_msg->setAccuracy(accuracyModel);
+            flexe_msg->setF1Score(f1);
+            flexe_msg->setComputationCapability(computationCapability);
+            flexe_msg->setEntropy(entropy);
+
+            if (trainingLatency < 0) {
+                EV << "WARNING: trainingLatency negativo ("
+                   << trainingLatency << "), ajustando para 0\n";
+                trainingLatency = 0;
+            }
+
+            EV << "\n========== LOCAL MODEL SEND ==========\n";
+            EV << "Vehicle      : " << self << "\n";
+            EV << "Kind         : " << flexe_msg->getKind() << "\n";
+            EV << "MsgID        : " << flexe_msg->getMsgId() << "\n";
+            EV << "SenderID     : " << flexe_msg->getSenderID() << "\n";
+            EV << "F1           : " << flexe_msg->getF1Score() << "\n";
+            EV << "SendTime     : " << flexe_msg->getSendTime() << "\n";
+            EV << "======================================\n";
+
+            DemoBaseApplLayer::sendDown(flexe_msg);
+
+            logToFile(
+                "MODEL_LOCAL_SEND"
+                " | Vehicle: " + std::to_string(self) +
+                " | MsgID: " + std::to_string(uniqueMsgId) +
+                " | Time: " + std::to_string(simTime().dbl())
+            );
+
+            logToFile(
+                "MODEL_SEND"
+                " | Vehicle: " + std::to_string(self) +
+                " | MsgID: " + std::to_string(uniqueMsgId) +
+                " | Time: " + std::to_string(simTime().dbl())
+            );
+
+            trainFlag = false;
+            break;
+        }
+
+        case RESOURCE_REQUEST_EVT: {
+
+            long uniqueMsgId = ++globalMessageCounter;
+
+
+            std::tie(numExamples, entropy, lossModel, accuracyModel, outputMSG) = client->get_information(self, model, dataset, scenario, seed, nonIID, idModel, "");
+            
+            FlexeMessage* flexe_msg_res = new FlexeMessage();
+            DemoBaseApplLayer::populateWSM(flexe_msg_res);
+            flexe_msg_res->setKind(RESOURCE_REQUEST_EVT);
+            flexe_msg_res->setSenderID(self);
+            flexe_msg_res->setNumExamples(numExamples);
+            flexe_msg_res->setComputationCapability(computationCapability);
+            flexe_msg_res->setEntropy(entropy);
+
+            //double delay = uniform(0, 0.01);
+            //DemoBaseApplLayer::sendDelayedDown(flexe_msg_res, delay);
+            DemoBaseApplLayer::sendDown(flexe_msg_res);
+            logToFile("SENT | MsgID: " + std::to_string(uniqueMsgId) +
+                      " | Time: " + std::to_string(simTime().dbl()));
+
+            resourceFlag = false;
+            break;
+        }
+
+        default:
+            // Caso queira tratar mensagens desconhecidas
+            break;
+    }
+}
+
+
+void MLApp::handlePositionUpdate(cObject* obj){
+    if(speedZero){
+        traciVehicle->setSpeed(0.0);
+    }
+    DemoBaseApplLayer::handlePositionUpdate(obj);
+}
+
+
+void MLApp::logToFile(const std::string& line) {
+    std::ofstream file(vehicleLogFile, std::ios::app);
+    if (file.is_open()) {
+        file << line << "\n";
+        file.close();
+    }
+}
+

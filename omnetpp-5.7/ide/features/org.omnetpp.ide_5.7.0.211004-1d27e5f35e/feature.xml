@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.omnetpp.ide"
+      label="OMNeT++ IDE"
+      version="5.7.0.211004-1d27e5f35e"
+      provider-name="OpenSim Ltd."
+      os="linux,macosx,win32"
+      ws="cocoa,gtk,win32"
+      arch="x86_64">
+
+   <requires>
+      <import feature="org.eclipse.platform"/>
+      <import feature="org.eclipse.cdt"/>
+      <import feature="org.eclipse.gef"/>
+      <import feature="org.eclipse.gmf"/>
+      <import feature="org.eclipse.gmf.runtime.thirdparty"/>
+   </requires>
+
+   <plugin
+         id="org.omnetpp.common.core"
+         download-size="2829"
+         install-size="3478"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.common"
+         download-size="740"
+         install-size="1358"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.eventlogtable"
+         download-size="111"
+         install-size="243"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.figures"
+         download-size="72"
+         install-size="133"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.ide.nativelibs"
+         download-size="304"
+         install-size="774"
+         version="5.7.0.211004-1d27e5f35e"/>
+
+   <plugin
+         id="org.omnetpp.ide.nativelibs.linux.x86_64"
+         os="linux"
+         arch="x86_64"
+         download-size="2143"
+         install-size="6108"
+         version="5.7.0.211004-1d27e5f35e"
+         fragment="true"/>
+
+   <plugin
+         id="org.omnetpp.ide.nativelibs.macosx"
+         os="macosx"
+         download-size="1517"
+         install-size="4043"
+         version="5.7.0.211004-1d27e5f35e"
+         fragment="true"/>
+
+   <plugin
+         id="org.omnetpp.ide.nativelibs.win32.x86_64"
+         os="win32"
+         arch="x86_64"
+         download-size="1722"
+         install-size="4437"
+         version="5.7.0.211004-1d27e5f35e"
+         fragment="true"/>
+
+   <plugin
+         id="org.omnetpp.inifile.editor"
+         download-size="494"
+         install-size="982"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.main"
+         download-size="179"
+         install-size="784"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.ned.core"
+         download-size="120"
+         install-size="257"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.ned.editor"
+         download-size="638"
+         install-size="1246"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.ned.model"
+         download-size="200"
+         install-size="430"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.scave"
+         download-size="1159"
+         install-size="2828"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.scave.builder"
+         download-size="23"
+         install-size="45"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.scave.model"
+         download-size="230"
+         install-size="557"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.sequencechart"
+         download-size="220"
+         install-size="442"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.launch"
+         download-size="94"
+         install-size="189"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.msg.editor"
+         download-size="37"
+         install-size="59"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.cdt"
+         download-size="269"
+         install-size="550"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.omnetpp.doc"
+         download-size="21047"
+         install-size="46979"
+         version="5.7.0.211004-1d27e5f35e"/>
+
+   <plugin
+         id="org.omnetpp.neddoc"
+         download-size="108"
+         install-size="209"
+         version="5.7.0.211004-1d27e5f35e"
+         unpack="false"/>
+
+   <plugin
+         id="org.visigoths.freemarker"
+         download-size="788"
+         install-size="892"
+         version="2.3.15"/>
+
+   <plugin
+         id="org.visigoths.freemarker.ide"
+         download-size="62"
+         install-size="107"
+         version="0.3.1.omnetpp"
+         unpack="false"/>
+
+   <plugin
+         id="org.swtworkbench.xswt"
+         download-size="226"
+         install-size="425"
+         version="1.1.2"
+         unpack="false"/>
+
+</feature>

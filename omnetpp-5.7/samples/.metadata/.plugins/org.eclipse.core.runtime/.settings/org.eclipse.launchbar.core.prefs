@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:simple - cologne,org.eclipse.launchbar.core.descriptorType.default\:simple,org.eclipse.launchbar.core.descriptorType.default\:simple - cologne_fed
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:simple\ -\ cologne_fed/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:simple\ -\ cologne_fed/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:simple/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:simple/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

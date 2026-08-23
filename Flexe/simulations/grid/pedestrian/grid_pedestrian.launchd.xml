@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <copy file="grid_pedestrian.net.xml" />
+    <copy file="grid_vehicle.rou.xml" />
+    <copy file="grid_pedestrian.rou.xml" />
+    <!-- <copy file="grid_pedestrian.poly.xml" /> -->
+    <copy file="grid_pedestrian.sumo.cfg" type="config" />
+</launch>
+

@@ -1,0 +1,32 @@
+02:48:22 **** Incremental Build of configuration release for project flexe ****
+make MODE=release all 
+cd src && make
+make[1]: Entering directory '/home/flexe/Flexe/src'
+flexe/application/FedLimRSU11p.cc
+flexe/application/FedSETRANDOMRSU11p.cc
+flexe/application/FedSETRANDOMRSU11p.cc:222:18: warning: 'random_shuffle<__gnu_cxx::__normal_iterator<int *, std::vector<int>>>' is deprecated: use 'std::shuffle' instead [-Wdeprecated-declarations]
+            std::random_shuffle(std::begin(connectedClientsVector), std::end(connectedClientsVector));
+                 ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_algo.h:4539:5: note: 'random_shuffle<__gnu_cxx::__normal_iterator<int *, std::vector<int>>>' has been explicitly marked deprecated here
+    _GLIBCXX14_DEPRECATED_SUGGEST("std::shuffle")
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++config.h:112:45: note: expanded from macro '_GLIBCXX14_DEPRECATED_SUGGEST'
+# define _GLIBCXX14_DEPRECATED_SUGGEST(ALT) _GLIBCXX_DEPRECATED_SUGGEST(ALT)
+                                            ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++config.h:96:19: note: expanded from macro '_GLIBCXX_DEPRECATED_SUGGEST'
+  __attribute__ ((__deprecated__ ("use '" ALT "' instead")))
+                  ^
+1 warning generated.
+flexe/application/MLApp.cc
+flexe/application/MLEntropyApp.cc
+flexe/proto/flexe.grpc.pb.cc
+flexe/proto/flexe.pb.cc
+Creating shared library: ../out/clang-release/src/libflexe.so
+echo /home/flexe/Flexe
+/home/flexe/Flexe
+/home/flexe/.conan/data/protobuf/3.17.1/_/_/package/53f76f058631e1c3a500008c75af3f37d7786131/bin/protoc --proto_path /home/flexe/Flexe /home/flexe/Flexe/flexe.proto --cpp_out /home/flexe/Flexe/src/flexe/proto/ 
+/home/flexe/.conan/data/protobuf/3.17.1/_/_/package/53f76f058631e1c3a500008c75af3f37d7786131/bin/protoc --proto_path /home/flexe/Flexe --grpc_out=/home/flexe/Flexe/src/flexe/proto/ --plugin=protoc-gen-grpc=/home/flexe/.conan/data/grpc/1.38.1/_/_/package/44ecaec4536223f790dd5e0a72b2d16b1dfaa76c/bin/grpc_cpp_plugin /home/flexe/Flexe/flexe.proto
+make[1]: Leaving directory '/home/flexe/Flexe/src'
+
+02:48:51 Build Finished. 0 errors, 1 warnings. (took 28s.745ms)
+

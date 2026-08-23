@@ -1,0 +1,607 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>OMNeT&#8288;+&#8288;+ Installation Guide</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book"><div class="titlepage"><div><div><h1 class="title"><a name="idm1"></a>OMNeT&#8288;+&#8288;+ Installation Guide</h1></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="chapter"><a href="#_general_information">1. General Information</a></span></dt><dd><dl><dt><span class="section"><a href="#_introduction">Introduction</a></span></dt><dt><span class="section"><a href="#_supported_platforms">Supported Platforms</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_windows">2. Windows</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_windows_versions">Supported Windows Versions</a></span></dt><dt><span class="section"><a href="#_installing_omnetpp">Installing OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_environment_variables">Environment Variables</a></span></dt><dt><span class="section"><a href="#_reconfiguring_the_libraries">Reconfiguring the Libraries</a></span></dt><dt><span class="section"><a href="#_portability_issues">Portability Issues</a></span></dt><dt><span class="section"><a href="#_additional_packages">Additional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_mpi">MPI</a></span></dt><dt><span class="section"><a href="#_akaroa">Akaroa</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_macos">3. macOS</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_releases">Supported Releases</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages">Installing the Prerequisite Packages</a></span></dt><dt><span class="section"><a href="#_enabling_development_mode_in_terminal">Enabling Development Mode in Terminal</a></span></dt><dt><span class="section"><a href="#_running_omnetpp_on_apple_silicon">Running OMNeT&#8288;+&#8288;+ on Apple Silicon</a></span></dt><dt><span class="section"><a href="#_additional_steps_required_on_macos_to_use_the_debugger">Additional Steps Required on macOS to Use the Debugger</a></span></dt><dt><span class="section"><a href="#_downloading_and_unpacking_omnetpp">Downloading and Unpacking OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_environment_variables_2">Environment Variables</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp_2">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation_2">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide_2">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_using_the_ide">Using the IDE</a></span></dt><dt><span class="section"><a href="#_reconfiguring_the_libraries_2">Reconfiguring the Libraries</a></span></dt><dt><span class="section"><a href="#_additional_packages_2">Additional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_openmpi">OpenMPI</a></span></dt><dt><span class="section"><a href="#_graphviz">GraphViz</a></span></dt><dt><span class="section"><a href="#_doxygen">Doxygen</a></span></dt><dt><span class="section"><a href="#_akaroa_2">Akaroa</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_linux">4. Linux</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_linux_distributions">Supported Linux Distributions</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_2">Installing the Prerequisite Packages</a></span></dt><dt><span class="section"><a href="#_downloading_and_unpacking">Downloading and Unpacking</a></span></dt><dt><span class="section"><a href="#_environment_variables_3">Environment Variables</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp_3">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation_3">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide_3">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_using_the_ide_2">Using the IDE</a></span></dt><dt><span class="section"><a href="#_reconfiguring_the_libraries_3">Reconfiguring the Libraries</a></span></dt><dt><span class="section"><a href="#_additional_packages_3">Additional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_qtenv">Qtenv</a></span></dt><dt><span class="section"><a href="#_akaroa_3">Akaroa</a></span></dt><dt><span class="section"><a href="#_nemiver">Nemiver</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_ubuntu">5. Ubuntu</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_releases_2">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_3">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation">Graphical Installation</a></span></dt><dt><span class="section"><a href="#_post_installation_steps">Post-Installation Steps</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_fedora_34">6. Fedora 34</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_releases_3">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal_2">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_4">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation_2">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation_2">Graphical Installation</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_red_hat">7. Red Hat</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_releases_4">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal_3">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_5">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation_3">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation_3">Graphical Installation</a></span></dt></dl></dd><dt><span class="section"><a href="#_selinux">SELinux</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_opensuse">8. OpenSUSE</a></span></dt><dd><dl><dt><span class="section"><a href="#_supported_releases_5">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal_4">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_6">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation_4">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation_4">Graphical Installation</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_generic_unix">9. Generic Unix</a></span></dt><dd><dl><dt><span class="section"><a href="#_introduction_2">Introduction</a></span></dt><dt><span class="section"><a href="#_dependencies">Dependencies</a></span></dt><dt><span class="section"><a href="#_determining_package_names">Determining Package Names</a></span></dt><dd><dl><dt><span class="section"><a href="#_tcl_tk">Tcl/Tk</a></span></dt><dt><span class="section"><a href="#_mpi_2">MPI</a></span></dt></dl></dd><dt><span class="section"><a href="#_downloading_and_unpacking_2">Downloading and Unpacking</a></span></dt><dt><span class="section"><a href="#_environment_variables_4">Environment Variables</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp_4">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation_4">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide_4">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_optional_packages">Optional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_akaroa_4">Akaroa</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#_build_options">10. Build Options</a></span></dt><dd><dl><dt><span class="section"><a href="#_configure_user_options">Configure.user Options</a></span></dt><dt><span class="section"><a href="#_moving_the_installation">Moving the Installation</a></span></dt><dt><span class="section"><a href="#_using_different_compilers">Using Different Compilers</a></span></dt></dl></dd></dl></div><div class="list-of-figures"><p><b>List of Figures</b></p><dl><dt>3.1. <a href="#idm168">Enable Running Unsigned Code in Terminal</a></dt><dt>4.1. <a href="#idm435">Configuring OMNeT&#8288;+&#8288;+</a></dt><dt>4.2. <a href="#idm459">Building OMNeT&#8288;+&#8288;+</a></dt><dt>4.3. <a href="#idm486">The Simulation IDE</a></dt><dt>5.1. <a href="#idm591">Command-Line Package Installation</a></dt><dt>5.2. <a href="#idm615">Synaptic Package Manager</a></dt><dt>8.1. <a href="#idm799">Yast Software Management</a></dt><dt>9.1. <a href="#idm938">Configuring OMNeT&#8288;+&#8288;+</a></dt><dt>9.2. <a href="#idm966">Building OMNeT&#8288;+&#8288;+</a></dt><dt>9.3. <a href="#idm995">The Simulation IDE</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_general_information"></a>Chapter 1. General Information</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_introduction">Introduction</a></span></dt><dt><span class="section"><a href="#_supported_platforms">Supported Platforms</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_introduction"></a>Introduction</h2></div></div></div><p>This document describes how to install OMNeT&#8288;+&#8288;+ on various platforms.
+One chapter is dedicated to each operating system.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_platforms"></a>Supported Platforms</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ has been tested and is supported on the following operating systems:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Windows x86_64
+</li><li class="listitem">
+MacOS 10.12 or later
+</li><li class="listitem">
+Linux distributions covered in this Installation Guide
+</li></ul></div><p>The Simulation IDE is supported on the following platforms:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Linux x86_64
+</li><li class="listitem">
+Windows x86_64
+</li><li class="listitem">
+MacOS x86_64
+</li></ul></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Simulations can be run practically on any unix-like environment with
+a decent and fairly up-to-date C&#8288;+&#8288;+ compiler, for example gcc 5.x. Certain
+OMNeT&#8288;+&#8288;+ features (Qtenv, parallel simulation, XML support, etc.) depend
+on the availability of external libraries (Tcl/Tk, MPI, LibXML or Expat,
+etc.)</p><p>IDE platforms are restricted because the IDE relies on a native shared
+library, which we compile for the above platforms and distribute
+in binary form for convenience.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_windows"></a>Chapter 2. Windows</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_windows_versions">Supported Windows Versions</a></span></dt><dt><span class="section"><a href="#_installing_omnetpp">Installing OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_environment_variables">Environment Variables</a></span></dt><dt><span class="section"><a href="#_reconfiguring_the_libraries">Reconfiguring the Libraries</a></span></dt><dt><span class="section"><a href="#_portability_issues">Portability Issues</a></span></dt><dt><span class="section"><a href="#_additional_packages">Additional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_mpi">MPI</a></span></dt><dt><span class="section"><a href="#_akaroa">Akaroa</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_windows_versions"></a>Supported Windows Versions</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ supports 64-bit versions of Windows.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>32-bit Windows versions are no longer supported. If you need 32-bit
+builds on Windows, we recommend using OMNeT&#8288;+&#8288;+ 5.0</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_omnetpp"></a>Installing OMNeT&#8288;+&#8288;+</h2></div></div></div><p>Download the OMNeT&#8288;+&#8288;+ source code from <a class="ulink" href="http://omnetpp.org" target="_top">http://omnetpp.org</a>. Make sure
+you select the Windows-specific archive, named
+<code class="literal">omnetpp-5.7-windows-x86_64.zip</code>.</p><p>The package is self-contained: in addition to OMNeT&#8288;+&#8288;+ files
+it includes a C&#8288;+&#8288;+ compiler, a command-line build environment, and all
+libraries and programs required by OMNeT&#8288;+&#8288;+.</p><p>Copy the OMNeT&#8288;+&#8288;+ archive to the directory where you want to install it.
+Choose a directory whose full path <span class="strong"><strong>does not contain any space</strong></span>; for example,
+do not put OMNeT&#8288;+&#8288;+ under <span class="emphasis"><em>Program Files</em></span>.</p><p>Extract the zip file. To do so, right-click the zip file in Windows Explorer,
+and select <span class="emphasis"><em>Extract All</em></span> from the menu. You can also use external programs
+like Winzip or 7zip.</p><p>When you look into the new <code class="literal">omnetpp-5.7</code> directory, should see
+directories named <code class="literal">doc</code>, <code class="literal">images</code>, <code class="literal">include</code>, <code class="literal">tools</code>, etc., and files named
+<code class="literal">mingwenv.cmd</code>, <code class="literal">configure</code>, <code class="literal">Makefile</code>, and others.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_configuring_and_building_omnetpp"></a>Configuring and Building OMNeT&#8288;+&#8288;+</h2></div></div></div><p>Start <code class="literal">mingwenv.cmd</code> in the <code class="literal">omnetpp-5.7</code> directory by double-clicking
+it in Windows Explorer. It will bring up a console with the MSYS <span class="emphasis"><em>bash</em></span> shell,
+where the path is already set to include the <code class="literal">omnetpp-5.7/bin</code> directory.
+On the first start of the shell, you may need to wait for the extraction of
+the <code class="literal">tools</code> directory.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you want to start simulations from outside the shell as well
+(for example from Explorer), you need to add OMNeT&#8288;+&#8288;+'s <code class="literal">bin</code> directory and also
+the <code class="literal">bin</code> directories in the tools folder to the path; instructions are provided later.</p></div><p>First, check the contents of the <code class="literal">configure.user</code> file to make sure
+it contains the settings you need. In most cases you don&#8217;t need to change anything.</p><pre class="literallayout">notepad configure.user</pre><p>Then enter the following commands:</p><pre class="literallayout">$ ./configure
+$ make</pre><p>The build process will create both debug and release binaries.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_verifying_the_installation"></a>Verifying the Installation</h2></div></div></div><p>You should now test all samples and check they run correctly. As an example,
+the <span class="emphasis"><em>aloha</em></span> example is started by entering the following commands:</p><pre class="literallayout">$ cd samples/aloha
+$ ./aloha</pre><p>By default, the samples will run using the graphical Qtenv environment.
+You should see GUI windows and dialogs.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_starting_the_ide"></a>Starting the IDE</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ comes with an Eclipse-based Simulation IDE. You should be able
+to start the IDE by typing:</p><pre class="literallayout">$ omnetpp</pre><p>We recommend that you start the IDE from the command-line.
+Yo can also create a shortcut for starting the IDE. To do so, locate
+the <code class="literal">omnetpp.exe</code> program in the <code class="literal">omnetpp-5.7/ide</code> directory in Windows
+Explorer, right-click it, and choose <span class="emphasis"><em>Send To &gt; Desktop (create shortcut)</em></span> from
+the menu. On Windows 7, you can right-click the taskbar icon while the IDE is running,
+and select <span class="emphasis"><em>Pin this program to taskbar</em></span> from the context menu.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_environment_variables"></a>Environment Variables</h2></div></div></div><p>If you want to start OMNeT&#8288;+&#8288;+ simulations outside the shell as well
+(for example from Exlorer), you need to add OMNeT&#8288;+&#8288;+'s <code class="literal">bin</code>,
+<code class="literal">tools/win64/usr/bin</code> and <code class="literal">tools/win64/mingw64/bin</code> directories
+to the path.</p><p>First, open the <span class="emphasis"><em>Environment Variables</em></span> dialog.</p><p>Click the Start button, then start typing <code class="literal">environment variables</code>
+into the search box. Choose <span class="emphasis"><em>Edit environment variables for your account</em></span> when it
+appears in the list. The  dialog comes up.</p><p>In the dialog, select <code class="literal">path</code> or <code class="literal">PATH</code> in the list, click <span class="emphasis"><em>Edit</em></span>. Append
+"<code class="literal">;&lt;omnetpp-dir&gt;\bin</code>" and the other needed directories to the value (without quotes),
+where <code class="literal">&lt;omnetpp-dir&gt;</code> is the name of the OMNeT&#8288;+&#8288;+ root directory
+(for example <code class="literal">C:\omnetpp-5.7</code>).
+Hit Enter to accept.</p><p>You need to log-out and then log-in for the changes to take effect.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_reconfiguring_the_libraries"></a>Reconfiguring the Libraries</h2></div></div></div><p>If you need to recompile the OMNeT&#8288;+&#8288;+ components with different flags (e.g.
+different optimization), then change the top-level OMNeT&#8288;+&#8288;+ directory, edit
+<code class="literal">configure.user</code> accordingly, then type:</p><pre class="literallayout">$ ./configure
+$ make clean
+$ make</pre><p>If you want to recompile just a single library, then change to the directory
+of the library (e.g. <code class="literal">cd src/sim</code>) and type:</p><pre class="literallayout">$ make clean
+$ make</pre><p>By default, libraries are compiled in both debug and release mode. If you want
+to make release or debug builds only, use:</p><pre class="literallayout">$ make MODE=release</pre><p>or</p><pre class="literallayout">$ make MODE=debug</pre><p>By default, shared libraries will be created. If you want to build static
+libraries, set <code class="literal">SHARED_LIBS=no</code> in <code class="literal">configure.user</code> and re-configure your
+project.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The built libraries and programs are immediately copied
+to the <code class="literal">lib/</code> and <code class="literal">bin/</code> subdirs.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_portability_issues"></a>Portability Issues</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ has been tested with both the gcc and the clang compiler from
+the MinGW-w64 package.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_additional_packages"></a>Additional Packages</h2></div></div></div><p>Note that Doxygen and GraphViz are already included in the OMNeT&#8288;+&#8288;+ package,
+and do not need to be downloaded.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_mpi"></a>MPI</h3></div></div></div><p>MPI is only needed if you would like to run parallel simulations.</p><p>There are several MPI implementations for Windows, and OMNeT&#8288;+&#8288;+ does not
+mandate any specific one. We recommend DeinoMPI, which can be downloaded
+from <a class="ulink" href="http://mpi.deino.net" target="_top">http://mpi.deino.net</a>.</p><p>After installing DeinoMPI, adjust the <code class="literal">MPI_DIR</code> setting in OMNeT&#8288;+&#8288;+'s
+<code class="literal">configure.user</code>, and reconfigure and recompile OMNeT&#8288;+&#8288;+:</p><pre class="literallayout">$ ./configure
+$ make cleanall
+$ make</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>In general, if you would like to run parallel simulations, we recommend
+that you use Linux, macOS, or another unix-like platform.</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_akaroa"></a>Akaroa</h3></div></div></div><p>Akaroa 2.7.9, which is the latest version at the time of writing, does not
+support Windows. You may try to port it using the porting guide from the
+Akaroa distribution.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_macos"></a>Chapter 3. macOS</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_releases">Supported Releases</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages">Installing the Prerequisite Packages</a></span></dt><dt><span class="section"><a href="#_enabling_development_mode_in_terminal">Enabling Development Mode in Terminal</a></span></dt><dt><span class="section"><a href="#_running_omnetpp_on_apple_silicon">Running OMNeT&#8288;+&#8288;+ on Apple Silicon</a></span></dt><dt><span class="section"><a href="#_additional_steps_required_on_macos_to_use_the_debugger">Additional Steps Required on macOS to Use the Debugger</a></span></dt><dt><span class="section"><a href="#_downloading_and_unpacking_omnetpp">Downloading and Unpacking OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_environment_variables_2">Environment Variables</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp_2">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation_2">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide_2">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_using_the_ide">Using the IDE</a></span></dt><dt><span class="section"><a href="#_reconfiguring_the_libraries_2">Reconfiguring the Libraries</a></span></dt><dt><span class="section"><a href="#_additional_packages_2">Additional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_openmpi">OpenMPI</a></span></dt><dt><span class="section"><a href="#_graphviz">GraphViz</a></span></dt><dt><span class="section"><a href="#_doxygen">Doxygen</a></span></dt><dt><span class="section"><a href="#_akaroa_2">Akaroa</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_releases"></a>Supported Releases</h2></div></div></div><p>This chapter provides additional information for installing OMNeT&#8288;+&#8288;+ on
+macOS.</p><p>The following releases are covered:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+macOS 11.x
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_the_prerequisite_packages"></a>Installing the Prerequisite Packages</h2></div></div></div><p>Install the command line developer tools for macOS (compiler, debugger, etc.)</p><pre class="literallayout">$ xcode-select --install</pre><p>Installing additional packages will enable more functionality in OMNeT&#8288;+&#8288;+; see
+the <span class="emphasis"><em>Additional packages</em></span> section at the end of this chapter.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_enabling_development_mode_in_terminal"></a>Enabling Development Mode in Terminal</h2></div></div></div><p>MacOS has a strict default security policy preventing the execution of unsigned code. This behavior often
+interferes with the development process so you must explicitly allow running unsigned code from a Terminal.
+On the <span class="strong"><strong>System Preferences / Security and Privacy / Privacy</strong></span> tab, select <span class="strong"><strong>Development Tools</strong></span> on the left side,
+unlock the panel with the lock icon on the bottom left and select the Terminal app on the right side to
+override the default security policy for the Terminal app.</p><div class="figure"><a name="idm168"></a><p class="title"><b>Figure 3.1. Enable Running Unsigned Code in Terminal</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/macos-security.png" align="middle" width="100%" alt="pictures/macos-security.png"></td></tr></table></div></div></div><br class="figure-break"><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>Make sure that executing developer signed code is allowed at the bottom
+of the <span class="strong"><strong>System Preferences / Security and Privacy / General</strong></span> tab.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_running_omnetpp_on_apple_silicon"></a>Running OMNeT&#8288;+&#8288;+ on Apple Silicon</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ does not currently support the Apple M1 processor natively, but you can run the x86_64 version using
+the Rosetta 2 emulator. To run OMNeT&#8288;+&#8288;+ under emulation, open a terminal window, then execute:</p><pre class="literallayout">$ arch -x86_64 /bin/zsh --login</pre><p>After this, follow the normal installation instructions and be sure to execute all commands in this terminal. Executing <code class="literal">source setenv</code> will automatically do this for you if it detects that it is running on Apple silicon.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The above command may graphically prompt you to allow the installation of the emulator component.
+You can also manually trigger the installation from the command line using the following command:
+<code class="literal">softwareupdate --install-rosetta --agree-to-license</code>.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_additional_steps_required_on_macos_to_use_the_debugger"></a>Additional Steps Required on macOS to Use the Debugger</h2></div></div></div><p>The Command Line Developer Tools package contains the <code class="literal">lldb</code> debugger. OMNeT&#8288;+&#8288;+ 5.7 and later contains the necessary
+driver binary (<code class="literal">lldbmi2</code>) that allows <code class="literal">lldb</code> to be used in the OMNeT&#8288;+&#8288;+ IDE. If you are upgrading from an earlier
+version of OMNeT&#8288;+&#8288;+, be sure to delete and recreate all Launch Configurations in the IDE. This is required because
+older Launch Configurations were using <code class="literal">gdb</code> as the debugger, but the new IDE uses <code class="literal">lldbmi2</code> as the debugger
+executable.</p><p>On the first debug session the OS may prompt you to allow debugging with the <code class="literal">lldb</code> executable.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_downloading_and_unpacking_omnetpp"></a>Downloading and Unpacking OMNeT&#8288;+&#8288;+</h2></div></div></div><p>Download OMNeT&#8288;+&#8288;+ from <a class="ulink" href="http://omnetpp.org" target="_top">http://omnetpp.org</a>. Make sure you select to download
+the macOS specific archive, <code class="literal">omnetpp-5.7-macos-x86_64.tgz</code>.</p><p>Copy the archive to the directory where you want to install it. This is usually
+your home directory, <code class="literal">/Users/&lt;you&gt;</code>. Open a terminal, and extract the archive
+using the following command:</p><pre class="literallayout">$ tar zxvf omnetpp-5.7-macos-x86_64.tgz</pre><p>A subdirectory called <code class="literal">omnetpp-5.7</code> will be created, containing the simulator
+files.</p><p>Alternatively, you can also unpack the archive using Finder.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The Terminal can be found in the Applications / Utilities
+folder.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_environment_variables_2"></a>Environment Variables</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ needs its <code class="literal">bin/</code> and <code class="literal">tools/macosx/bin</code> directories to be in the path.
+To add them to <code class="literal">PATH</code> temporarily (in the current shell only), change into the OMNeT&#8288;+&#8288;+
+directory and source the <code class="literal">setenv</code> script:</p><pre class="literallayout">$ cd omnetpp-5.7
+$ source setenv</pre><p>To set the environment variables permanently, edit <code class="literal">.profile</code>, <code class="literal">.zprofile</code> or <code class="literal">.zshenv</code> in your home directory and
+add a line something like this:</p><pre class="literallayout">[ -f "$HOME/omnetpp-5.7/setenv" ] &amp;&amp; source "$HOME/omnetpp-5.7/setenv"</pre></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_configuring_and_building_omnetpp_2"></a>Configuring and Building OMNeT&#8288;+&#8288;+</h2></div></div></div><p>Check <code class="literal">configure.user</code> to make sure it contains the settings you need.
+In most cases you don&#8217;t need to change anything in it.</p><p>In the top-level OMNeT&#8288;+&#8288;+ directory, type:</p><pre class="literallayout">$ ./configure</pre><p>The <code class="literal">configure</code> script detects installed software and configuration of your
+system. It writes the results into the <code class="literal">Makefile.inc</code> file, which will be
+read by the makefiles during the build process.</p><p>Normally, the <code class="literal">configure</code> script needs to be running under the graphical
+environment in order to test for <code class="literal">wish</code>, the Tcl/Tk shell. If you are
+logged in via an ssh session or you want to compile OMNeT&#8288;+&#8288;+ without Tcl/Tk
+and/or Qtenv, use the command</p><pre class="literallayout">$ ./configure WITH_TKENV=no WITH_QTENV=no</pre><p>instead of plain <code class="literal">./configure</code>.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If there is an error during <code class="literal">configure</code>, the output may give hints about what
+went wrong. Scroll up to see the messages. (You may need to increase
+the scrollback buffer size of the terminal and re-run <code class="literal">./configure</code>.) The script
+also writes a very detailed log of its operation into <code class="literal">config.log</code> to help track
+down errors. Since <code class="literal">config.log</code> is very long, it is recommended that you open
+it in an editor and search for phrases like <span class="emphasis"><em>error</em></span> or the name of the package
+associated with the problem.</p></div><p>When <code class="literal">./configure</code> has finished, you can compile OMNeT&#8288;+&#8288;+.
+Type in the terminal:</p><pre class="literallayout">$ make</pre><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>To take advantage of multiple processor cores, add the <code class="literal">-j4</code> option to the
+<code class="literal">make</code> command line.</p></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The build process will not write anything outside its directory,
+so no special privileges are needed.</p></div><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>The make command will seemingly compile everything twice. This is because
+both debug and optimized versions of the libraries are built.
+If you only want to build one set of the libraries, specify
+<code class="literal">MODE=debug</code> or <code class="literal">MODE=release</code>:</p><pre class="literallayout">$ make MODE=release</pre></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_verifying_the_installation_2"></a>Verifying the Installation</h2></div></div></div><p>You can now verify that the sample simulations run correctly. For example,
+the aloha simulation is started by entering the following commands:</p><pre class="literallayout">$ cd samples/aloha
+$ ./aloha</pre><p>By default, the samples will run using the Qtenv environment. You should see
+nice gui windows and dialogs.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_starting_the_ide_2"></a>Starting the IDE</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ comes with an Eclipse-based Simulation IDE. Start the IDE by typing:</p><pre class="literallayout">$ omnetpp</pre><p>If you would like to be able to launch the IDE via Applications,
+the Dock or a desktop shortcut, do the following: open the <code class="literal">omnetpp-5.7</code>
+folder in Finder, go into the <code class="literal">ide</code> subfolder, create an alias for the omnetpp
+program there (right-click, <span class="emphasis"><em>Make Alias</em></span>), and drag the new alias into the
+Applications folder, onto the Dock, or onto the desktop.</p><p>Alternatively, run one or both of the commands below:</p><pre class="literallayout">$ make install-menu-item
+$ make install-desktop-icon</pre><p>which will do roughly the same.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_using_the_ide"></a>Using the IDE</h2></div></div></div><p>When you try to build a project in the IDE, you may get the following warning message:</p><div class="blockquote"><blockquote class="blockquote"><p>Toolchain "&#8230;" is not supported on this platform or installation. Please go to the
+Project menu, and activate a different build configuration. (You may need to switch
+to the C/C&#8288;+&#8288;+ perspective first, so that the required menu items appear in the Project menu.)</p></blockquote></div><p>If you encounter this message, choose <span class="emphasis"><em>Project &gt; Properties &gt; C/C&#8288;+&#8288;+ Build &gt;
+Tool Chain Editor &gt; Current toolchain &gt; GCC for OMNeT&#8288;+&#8288;+</em></span>.</p><p>The IDE is documented in detail in the <span class="emphasis"><em>User Guide</em></span>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_reconfiguring_the_libraries_2"></a>Reconfiguring the Libraries</h2></div></div></div><p>If you need to recompile the OMNeT&#8288;+&#8288;+ components with different flags (e.g.
+different optimization), then change the top-level OMNeT&#8288;+&#8288;+ directory, edit
+<code class="literal">configure.user</code> accordingly, then type:</p><pre class="literallayout">$ ./configure
+$ make clean
+$ make</pre><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>To take advantage of multiple processor cores, add the <code class="literal">-j4</code> option to the
+<code class="literal">make</code> command line.</p></div><p>If you want to recompile just a single library, then change to the directory
+of the library (e.g. <code class="literal">cd src/sim</code>) and type:</p><pre class="literallayout">$ make clean
+$ make</pre><p>By default, libraries are compiled in both debug and release mode. If you want
+to make release or debug builds only, use:</p><pre class="literallayout">$ make MODE=release</pre><p>or</p><pre class="literallayout">$ make MODE=debug</pre><p>By default, shared libraries will be created. If you want to build static
+libraries, set <code class="literal">SHARED_LIBS=no</code> in <code class="literal">configure.user</code> and re-configure your
+project.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The built libraries and programs are immediately copied
+to the <code class="literal">lib/</code> and <code class="literal">bin/</code> subdirectories.</p></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The Tcl/Tk environment uses the native Aqua version of Tcl/Tk, so you
+will see native widgets. However, due to problems in the Tk/Aqua port,
+you may experience minor UI quirks. We recommend using Qtenv whenever
+it is possible.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_additional_packages_2"></a>Additional Packages</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_openmpi"></a>OpenMPI</h3></div></div></div><p>MacOS does not come with OpenMPI, so you must install it manually.
+You can install it from the Homebrew repo (<a class="ulink" href="http://brew.sh" target="_top">http://brew.sh</a>) by typing
+<code class="literal">brew install open-mpi</code>. In this case, you have to manually set
+the MPI_CFLAGS and MPI_LIBS variables in <code class="literal">configure.user</code> and re-run
+<code class="literal">./configure</code>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_graphviz"></a>GraphViz</h3></div></div></div><p>GraphViz is needed if you want to have diagrams in HTML documentation
+that you generate from NED files in the IDE (<span class="emphasis"><em>Generate NED Documentation&#8230;</em></span>
+item in the project context menu).</p><p>You can install it from the Homebrew project (<a class="ulink" href="http://brew.sh" target="_top">http://brew.sh</a>) by typing
+<code class="literal">brew install graphviz</code>.</p><p>After installation, make sure that the <code class="literal">dot</code> program is available
+from the command line. Open a terminal, and type</p><pre class="literallayout">$ dot -V</pre><p>Note the capital <span class="emphasis"><em>V</em></span>. The command should normally work out of the box.
+If you get the <span class="emphasis"><em>"command not found"</em></span> error, you need to put <code class="literal">dot</code> into the path.
+Find the <code class="literal">dot</code> program in the GraphViz installation directory, and
+soft link it into <code class="literal">/usr/local/bin</code> (<code class="literal">sudo ln -s &lt;path&gt;/dot /usr/local/bin</code>).</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_doxygen"></a>Doxygen</h3></div></div></div><p>Doxygen is needed if you want to generate documentation for C&#8288;+&#8288;+ code,
+as part of the HTML documentation that you generate from NED files in the IDE
+(<span class="emphasis"><em>Generate NED Documentation&#8230;</em></span> item in the project context menu).</p><p>You can install it from the Homebrew project (<a class="ulink" href="http://brew.sh" target="_top">http://brew.sh</a>) by typing
+<code class="literal">homebrew install doxygen</code>.</p><p>After installation, ensure that the <code class="literal">doxygen</code> program is available
+from the command line. Open a terminal, and type</p><pre class="literallayout">$ doxygen</pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_akaroa_2"></a>Akaroa</h3></div></div></div><p>Akaroa 2.7.9, which is the latest version at the time of writing, does not
+support macOS. You may try to port it using the porting guide from the
+Akaroa distribution.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_linux"></a>Chapter 4. Linux</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_linux_distributions">Supported Linux Distributions</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_2">Installing the Prerequisite Packages</a></span></dt><dt><span class="section"><a href="#_downloading_and_unpacking">Downloading and Unpacking</a></span></dt><dt><span class="section"><a href="#_environment_variables_3">Environment Variables</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp_3">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation_3">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide_3">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_using_the_ide_2">Using the IDE</a></span></dt><dt><span class="section"><a href="#_reconfiguring_the_libraries_3">Reconfiguring the Libraries</a></span></dt><dt><span class="section"><a href="#_additional_packages_3">Additional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_qtenv">Qtenv</a></span></dt><dt><span class="section"><a href="#_akaroa_3">Akaroa</a></span></dt><dt><span class="section"><a href="#_nemiver">Nemiver</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_linux_distributions"></a>Supported Linux Distributions</h2></div></div></div><p>This chapter provides instructions for installing OMNeT&#8288;+&#8288;+ on selected Linux
+distributions:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Ubuntu 18.04LTS, 20.04LTS
+</li><li class="listitem">
+Fedora Core 34
+</li><li class="listitem">
+RHEL 8.x
+</li><li class="listitem">
+OpenSUSE Leap 15.x
+</li></ul></div><p>This chapter describes the overall process.
+Distro-specific information, such as how to install the prerequisite
+packages, are covered by distro-specific chapters.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If your Linux distribution is not listed above, you still may be able to use some
+distro-specific instructions in this Guide.</p><p>Ubuntu derivatives (Ubuntu instructions may apply):</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Kubuntu, Xubuntu, Edubuntu, &#8230;
+</li><li class="listitem">
+Linux Mint
+</li></ul></div><p>Some Debian-based distros (Ubuntu instructions may apply, as Ubuntu itself
+is based on Debian):</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Knoppix and derivatives
+</li><li class="listitem">
+Mepis
+</li></ul></div><p>Some Fedora-based distros (Fedora instructions may apply):</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Simplis
+</li><li class="listitem">
+Eeedora
+</li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_the_prerequisite_packages_2"></a>Installing the Prerequisite Packages</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ requires several packages to be installed on the computer. These packages
+include the C&#8288;+&#8288;+ compiler (gcc or clang), the Java runtime, and several other libraries and
+programs. These packages can be installed from the software repositories of your
+Linux distribution.</p><p><span class="strong"><strong>See the chapter specific to your Linux distribution for
+instructions on installing the packages needed by OMNeT&#8288;+&#8288;+.</strong></span></p><p>Generally, you will need superuser permissions to install packages.</p><p>Not all packages are available from software repositories; some (optional)
+ones need to be downloaded separately from their web sites, and
+installed manually. See the section <span class="emphasis"><em>Additional Packages</em></span> later in this
+chapter.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_downloading_and_unpacking"></a>Downloading and Unpacking</h2></div></div></div><p>Download OMNeT&#8288;+&#8288;+ from <a class="ulink" href="http://omnetpp.org" target="_top">http://omnetpp.org</a>. Make sure you select to download
+the linux specific archive, <code class="literal">omnetpp-5.7-linux-x86_64.tgz</code>.</p><p>Copy the archive to the directory where you want to install it. This is usually
+your home directory, <code class="literal">/home/&lt;you&gt;</code>. Open a terminal, and extract the archive
+using the following command:</p><pre class="literallayout">$ tar xvfz omnetpp-5.7-linux-x86_64.tgz</pre><p>This will create an <code class="literal">omnetpp-5.7</code> subdirectory with the OMNeT&#8288;+&#8288;+ files in it.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>On how to open a terminal on your Linux installation, see the chapter
+specific to your Linux distribution.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_environment_variables_3"></a>Environment Variables</h2></div></div></div><p>OMNeT&#8288;+&#8288;+ needs its <code class="literal">bin/</code> directory to be in the path. To add <code class="literal">bin/</code> to
+<code class="literal">PATH</code> temporarily (in the current shell only), change into the OMNeT&#8288;+&#8288;+
+directory and source the <code class="literal">setenv</code> script:</p><pre class="literallayout">$ cd omnetpp-5.7
+$ source setenv</pre><p>The script also adds the <code class="literal">lib/</code> subdirectory to <code class="literal">LD_LIBRARY_PATH</code>, which may be
+necessary on systems that don&#8217;t support the rpath mechanism.</p><p>To set the environment variables permanently, edit <code class="literal">.bashrc</code> in your home
+directory. Use your favourite text editor to edit <code class="literal">.bashrc</code>, for example gedit:</p><pre class="literallayout">$ gedit ~/.bashrc</pre><p>Add the following line at the end of the file, then save it:</p><pre class="literallayout">export PATH=$HOME/omnetpp-5.7/bin:$PATH</pre><p>You need to close and re-open the terminal for the changes to take effect.</p><p>Alternatively, you can put the above line into <code class="literal">~/.bash_profile</code>, but then
+you need to log out and log in again for the changes to take effect.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you use a shell other than <span class="emphasis"><em>bash</em></span>, consult the man page of that shell
+to find out which startup file to edit, and how to set and export variables.</p><p>Note that all Linux distributions covered in this Installation Guide
+use <span class="emphasis"><em>bash</em></span> unless the user has explicitly selected another shell.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_configuring_and_building_omnetpp_3"></a>Configuring and Building OMNeT&#8288;+&#8288;+</h2></div></div></div><p>In the top-level OMNeT&#8288;+&#8288;+ directory, type:</p><pre class="literallayout">$ ./configure</pre><p>The <code class="literal">configure</code> script detects installed software and configuration of your
+system. It writes the results into the <code class="literal">Makefile.inc</code> file, which will be
+read by the makefiles during the build process.</p><div class="figure"><a name="idm435"></a><p class="title"><b>Figure 4.1. Configuring OMNeT&#8288;+&#8288;+</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/terminal-configuration.png" align="middle" width="100%" alt="pictures/terminal-configuration.png"></td></tr></table></div></div></div><br class="figure-break"><p>Normally, the <code class="literal">configure</code> script needs to be running under the graphical
+environment (X11) in order to test for <code class="literal">wish</code>, the Tcl/Tk shell. If you are logged in
+via an <span class="emphasis"><em>ssh</em></span> session, or there is some other reason why X is not running,
+the easiest way to work around the problem is to tell OMNeT&#8288;+&#8288;+ to build
+without Tcl/Tk and Qtenv. To do that, use the command</p><pre class="literallayout">$ ./configure WITH_TKENV=no WITH_QTENV=no</pre><p>instead of plain <code class="literal">./configure</code>.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If there is an error during <code class="literal">configure</code>, the output may give hints about what
+went wrong. Scroll up to see the messages. (Use Shift+PgUp; you may need to increase
+the scrollback buffer size of the terminal and re-run <code class="literal">./configure</code>.) The script
+also writes a very detailed log of its operation into <code class="literal">config.log</code> to help track
+down errors. Since <code class="literal">config.log</code> is very long, it is recommended that you open
+it in an editor and search for phrases like <span class="emphasis"><em>error</em></span> or the name of the package
+associated with the problem.</p></div><p>When <code class="literal">./configure</code> has finished, you can compile OMNeT&#8288;+&#8288;+.
+Type in the terminal:</p><pre class="literallayout">$ make</pre><div class="figure"><a name="idm459"></a><p class="title"><b>Figure 4.2. Building OMNeT&#8288;+&#8288;+</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/terminal-make.png" align="middle" width="100%" alt="pictures/terminal-make.png"></td></tr></table></div></div></div><br class="figure-break"><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>To take advantage of multiple processor cores, add the <code class="literal">-j8</code> option to the
+<code class="literal">make</code> command line.</p></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The build process will not write anything outside its directory,
+so no special privileges are needed.</p></div><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>The make command will seemingly compile everything twice. This is because
+both debug and optimized versions of the libraries are built.
+If you only want to build one set of the libraries, specify
+<code class="literal">MODE=debug</code> or <code class="literal">MODE=release</code>:</p><pre class="literallayout">$ make MODE=release</pre></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_verifying_the_installation_3"></a>Verifying the Installation</h2></div></div></div><p>You can now verify that the sample simulations run correctly. For example,
+the aloha simulation is started by entering the following commands:</p><pre class="literallayout">$ cd samples/aloha
+$ ./aloha</pre><p>By default, the samples will run using the Qtenv environment. You should see
+nice gui windows and dialogs.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_starting_the_ide_3"></a>Starting the IDE</h2></div></div></div><p>You can launch the OMNeT&#8288;+&#8288;+ Simulation IDE by typing the following command
+in the terminal:</p><pre class="literallayout">$ omnetpp</pre><div class="figure"><a name="idm486"></a><p class="title"><b>Figure 4.3. The Simulation IDE</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/ide-initial.png" align="middle" width="100%" alt="pictures/ide-initial.png"></td></tr></table></div></div></div><br class="figure-break"><p>If you would like to be able to access the IDE from the application launcher
+or via a desktop shortcut, run one or both of the commands below:</p><pre class="literallayout">$ make install-menu-item
+$ make install-desktop-icon</pre><p>Or add a shortcut that points to the <code class="literal">omnetpp</code> program in the <code class="literal">ide</code> subdirectory
+by other means, for example using the Linux desktop&#8217;s context menu.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_using_the_ide_2"></a>Using the IDE</h2></div></div></div><p>When you try to build a project in the IDE, you may get the following warning message:</p><div class="blockquote"><blockquote class="blockquote"><p>Toolchain "&#8230;" is not supported on this platform or installation. Please go to the
+Project menu, and activate a different build configuration. (You may need to switch
+to the C/C&#8288;+&#8288;+ perspective first, so that the required menu items appear in the Project menu.)</p></blockquote></div><p>If you encounter this message, choose <span class="emphasis"><em>Project &gt; Properties &gt; C/C&#8288;+&#8288;+ Build &gt;
+Tool Chain Editor &gt; Current toolchain &gt; GCC for OMNeT&#8288;+&#8288;+</em></span>.</p><p>The IDE is documented in detail in the <span class="emphasis"><em>User Guide</em></span>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_reconfiguring_the_libraries_3"></a>Reconfiguring the Libraries</h2></div></div></div><p>If you need to recompile the OMNeT&#8288;+&#8288;+ components with different flags (e.g.
+different optimization), then change the top-level OMNeT&#8288;+&#8288;+ directory, edit
+<code class="literal">configure.user</code> accordingly, then type:</p><pre class="literallayout">$ ./configure
+$ make cleanall
+$ make</pre><p>If you want to recompile just a single library, then change to the directory
+of the library (e.g. <code class="literal">cd src/sim</code>) and type:</p><pre class="literallayout">$ make clean
+$ make</pre><p>By default, libraries are compiled in both debug and release mode. If you want
+to make release or debug builds only, use:</p><pre class="literallayout">$ make MODE=release</pre><p>or</p><pre class="literallayout">$ make MODE=debug</pre><p>By default, shared libraries will be created. If you want to build static
+libraries, set <code class="literal">SHARED_LIBS=no</code> in <code class="literal">configure.user</code> and re-configure your
+project.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>For detailed description of all options please read the <span class="emphasis"><em>Build Options</em></span> chapter.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_additional_packages_3"></a>Additional Packages</h2></div></div></div><p>Note that at this point, MPI, Doxygen and GraphViz have been installed as part of the prerequisites.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_qtenv"></a>Qtenv</h3></div></div></div><p>OMNeT&#8288;+&#8288;+ 5 comes with a new Qt based runtime environment that supports also 3D visualization.
+The new environment can be disabled by the WITH_QTENV=no variable in the configure.user
+file and then running <code class="literal">./configure</code>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_akaroa_3"></a>Akaroa</h3></div></div></div><p>Linux distributions do not contain the Akaroa package. It must be downloaded,
+compiled and installed manually before installing OMNeT&#8288;+&#8288;+.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>As of version 2.7.9, Akaroa only supports Linux and Solaris.</p></div><p>Download Akaroa 2.7.9 from:
+  <a class="ulink" href="http://www.cosc.canterbury.ac.nz/research/RG/net_sim/simulation_group/akaroa/download.chtml" target="_top">http://www.cosc.canterbury.ac.nz/research/RG/net_sim/simulation_group/akaroa/download.chtml</a></p><p>Extract it into a temporary directory:</p><pre class="literallayout">$ tar xfz akaroa-2.7.9.tar.gz</pre><p>Configure, build and install the Akaroa library. By default, it will be installed into the
+<code class="literal">/usr/local/akaroa</code> directory.</p><pre class="literallayout">$ ./configure
+$ make
+$ sudo make install</pre><p>Go to the OMNeT&#8288;+&#8288;+ directory, and (re-)run the <code class="literal">configure</code> script. Akaroa will be
+automatically detected if you installed it to the default location.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_nemiver"></a>Nemiver</h3></div></div></div><p>Nemiver is the default debugger for the OMNeT&#8288;+&#8288;+ just-in-time debugging facility (see the
+<code class="literal">debugger-attach-on-startup</code> and <code class="literal">debugger-attach-on-error</code> configuration options).
+Nemiver can be installed via the package manager in most Linux distros.
+For example, on Ubuntu and other Debian-based distros you can install it by the
+following command:</p><pre class="literallayout">$ sudo apt-get install nemiver</pre></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_ubuntu"></a>Chapter 5. Ubuntu</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_releases_2">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_3">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation">Graphical Installation</a></span></dt><dt><span class="section"><a href="#_post_installation_steps">Post-Installation Steps</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_releases_2"></a>Supported Releases</h2></div></div></div><p>This chapter provides additional information for installing OMNeT&#8288;+&#8288;+ on
+Ubuntu Linux installations. The overall installation procedure is described
+in the <span class="emphasis"><em>Linux</em></span> chapter.</p><p>The following Ubuntu releases are covered:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Ubuntu 18.04LTS or 20.04LTS
+</li></ul></div><p>They were tested on the following architectures:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Intel 64-bit
+</li></ul></div><p>The instructions below assume that you use the default desktop and the bash shell.
+If you use another desktop environment or shell, you may need to adjust the
+instructions accordingly.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_opening_a_terminal"></a>Opening a Terminal</h2></div></div></div><p>Type <span class="emphasis"><em>terminal</em></span> in Dash and click on the Terminal icon.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_the_prerequisite_packages_3"></a>Installing the Prerequisite Packages</h2></div></div></div><p>You can perform the installation using the graphical user interface or
+from the terminal, whichever you prefer.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_command_line_installation"></a>Command-Line Installation</h3></div></div></div><p>Before starting the installation, refresh the database of available packages.
+Type in the terminal:</p><pre class="literallayout">$ sudo apt-get update</pre><p>To install the required packages, type in the terminal:</p><pre class="literallayout">$ sudo apt-get install build-essential clang lld bison flex perl \
+     python python3 qt5-default libqt5opengl5-dev tcl-dev tk-dev \
+     libxml2-dev zlib1g-dev doxygen graphviz libwebkit2gtk-4.0-37</pre><p>To use Qtenv with 3D visualization support, install the development packages
+for OpenSceneGraph (3.2 or later) and the osgEarth (2.7 or later) packages. (You
+may need to enable the <span class="emphasis"><em>Universe</em></span> software repository in Software Sources.</p><pre class="literallayout">$ sudo apt-get install openscenegraph-plugin-osgearth libosgearth-dev</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You may opt to use gcc and g++ instead of the clang and clang++ compilers. If you
+do not need the 3D visualization capabilities, you can disable them in the
+<span class="emphasis"><em>configure.user</em></span> file.</p></div><p>To enable the optional parallel simulation support you will need to install the MPI packages:</p><pre class="literallayout">$ sudo apt-get install openmpi-bin libopenmpi-dev</pre><p>At the confirmation questions (<span class="emphasis"><em>Do you want to continue? [Y/N]</em></span>), answer <span class="emphasis"><em>Y</em></span>.</p><div class="figure"><a name="idm591"></a><p class="title"><b>Figure 5.1. Command-Line Package Installation</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/terminal-package-install.png" align="middle" width="100%" alt="pictures/terminal-package-install.png"></td></tr></table></div></div></div><br class="figure-break"></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_graphical_installation"></a>Graphical Installation</h3></div></div></div><p>Open the dash and type <span class="emphasis"><em>Synaptic</em></span>.</p><p>Since software installation requires root permissions, Synaptic will ask you
+to type your password.</p><p>Search for the following packages in the list, click the squares before the names,
+then choose <span class="emphasis"><em>Mark for installation</em></span> or <span class="emphasis"><em>Mark for upgrade</em></span>.</p><p>If the <span class="emphasis"><em>Mark additional required changes?</em></span> dialog comes up, choose the <span class="emphasis"><em>Mark</em></span> button.</p><p>The packages:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+required: build-essential, clang, ldd, bison, flex, perl, qt5-default,
+  tcl-dev, tk-dev, libxml2-dev, zlib1g-dev, doxygen, graphviz, libwebkit2gtk-4.0-37
+</li><li class="listitem">
+recommended: libopenscenegraph-dev, openscenegraph-plugin-osgearth, libosgearth-dev,
+  openmpi-bin, libopenmpi-dev
+</li></ul></div><div class="figure"><a name="idm615"></a><p class="title"><b>Figure 5.2. Synaptic Package Manager</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/ubuntu-synaptic.png" align="middle" width="100%" alt="pictures/ubuntu-synaptic.png"></td></tr></table></div></div></div><br class="figure-break"><p>Click <span class="emphasis"><em>Apply</em></span>, then in the <span class="emphasis"><em>Apply the following changes?</em></span> window, click <span class="emphasis"><em>Apply</em></span> again.
+In the <span class="emphasis"><em>Changes applied</em></span> window, click <span class="emphasis"><em>Close</em></span>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_post_installation_steps"></a>Post-Installation Steps</h3></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="_setting_up_debugging"></a>Setting Up Debugging</h4></div></div></div><p>By default, Ubuntu does not allow ptracing of non-child processes by non-root users. That is,
+if you want to be able to debug simulation processes by attaching to them with a debugger,
+or similar, you want to be able to use OMNeT&#8288;+&#8288;+ just-in-time debugging
+(<code class="literal">debugger-attach-on-startup</code> and <code class="literal">debugger-attach-on-error</code> configuration options),
+you need to explicitly enable them.</p><p>To temporarily allow ptracing non-child processes, enter the following command:</p><pre class="literallayout">$ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope</pre><p>To permanently allow it, edit <code class="literal">/etc/sysctl.d/10-ptrace.conf</code> and change the line:</p><pre class="literallayout">kernel.yama.ptrace_scope = 1</pre><p>to read</p><pre class="literallayout">kernel.yama.ptrace_scope = 0</pre><p>Note that the default debugger for OMNeT&#8288;+&#8288;+ just-in-time debugging is <span class="emphasis"><em>Nemiver</em></span>,
+so it also needs to be installed:</p><pre class="literallayout">$ sudo apt-get install nemiver</pre></div></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_fedora_34"></a>Chapter 6. Fedora 34</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_releases_3">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal_2">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_4">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation_2">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation_2">Graphical Installation</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_releases_3"></a>Supported Releases</h2></div></div></div><p>This chapter provides additional information for installing OMNeT&#8288;+&#8288;+ on
+Fedora installations. The overall installation procedure is described
+in the <span class="emphasis"><em>Linux</em></span> chapter.</p><p>The following Fedora release is covered:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Fedora 34
+</li></ul></div><p>It was tested on the following architectures:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Intel 64-bit
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_opening_a_terminal_2"></a>Opening a Terminal</h2></div></div></div><p>Open the Search bar, and type <span class="emphasis"><em>Terminal</em></span>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_the_prerequisite_packages_4"></a>Installing the Prerequisite Packages</h2></div></div></div><p>You can perform the installation using the graphical user interface or
+from the terminal, whichever you prefer.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_command_line_installation_2"></a>Command-Line Installation</h3></div></div></div><p>To install the required packages, type in the terminal:</p><pre class="literallayout">$ sudo dnf install make clang lld bison flex perl \
+    python2 tcl-devel tk-devel qt5-devel libxml2-devel \
+    zlib-devel doxygen graphviz webkitgtk</pre><p>To use 3D visualization support in Qtenv, you should install
+OpenSceneGraph 3.2 or later and osgEarth 2.7 or later (recommended):</p><pre class="literallayout">$ sudo dnf install OpenSceneGraph-devel osgearth-devel</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You may opt to use gcc and g++ instead of the clang and clang++ compilers.</p></div><p>To enable the optional parallel simulation support you will need to install the
+MPI package:</p><pre class="literallayout">$ sudo dnf install openmpi-devel</pre><p>Note that <span class="emphasis"><em>openmpi</em></span> will not be available by default, it needs to be
+activated in every session with the</p><pre class="literallayout">$ module load mpi/openmpi-x86_64</pre><p>command. When in doubt, use <code class="literal">module avail</code> to display the list of available
+modules. If you need MPI in every session, you may add the <code class="literal">module load</code>
+command to your startup script (<code class="literal">.bashrc</code>).</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_graphical_installation_2"></a>Graphical Installation</h3></div></div></div><p>The graphical package manager can be launched by opening the Search bar
+and typing <span class="emphasis"><em>dnf</em></span>.</p><p>Search for the following packages in the list. Select the checkboxes
+in front of the names, and pick the latest version of each package.</p><p>The packages:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+make, bison, clang, lld, flex, perl, tcl-devel, tk-devel, qt5-devel, libxml2-devel,
+zlib-devel, webkitgtk, doxygen, graphviz, openmpi-devel, OpenSceneGraph-devel, osgearth-devel
+</li></ul></div><p>Click <span class="emphasis"><em>Apply</em></span>, then follow the instructions.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_red_hat"></a>Chapter 7. Red Hat</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_releases_4">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal_3">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_5">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation_3">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation_3">Graphical Installation</a></span></dt></dl></dd><dt><span class="section"><a href="#_selinux">SELinux</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_releases_4"></a>Supported Releases</h2></div></div></div><p>This chapter provides additional information for installing OMNeT&#8288;+&#8288;+ on
+Red Hat Enterprise Linux installations. The overall installation procedure
+is described in the <span class="emphasis"><em>Linux</em></span> chapter.</p><p>The following Red Hat release is covered:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Red Hat Enterprise Linux Desktop Workstation 7.x
+</li></ul></div><p>It was tested on the following architectures:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Intel 64-bit
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_opening_a_terminal_3"></a>Opening a Terminal</h2></div></div></div><p>Choose <span class="emphasis"><em>Applications &gt; Accessories &gt; Terminal</em></span> from the menu.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_the_prerequisite_packages_5"></a>Installing the Prerequisite Packages</h2></div></div></div><p>You can perform the installation using the graphical user interface or
+from the terminal, whichever you prefer.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You will need Red Hat Enterprise Linux Desktop Workstation for OMNeT&#8288;+&#8288;+.
+The <span class="emphasis"><em>Desktop Client</em></span> version does not contain development tools.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_command_line_installation_3"></a>Command-Line Installation</h3></div></div></div><p>To install the required packages, type in the terminal:</p><pre class="literallayout">$ su -c 'yum install make clang lld bison flex perl \
+    tcl-devel tk-devel qt-devel libxml2-devel zlib-devel \
+    doxygen graphviz openmpi-devel libpcap-devel'</pre><p>To use 3D visualization support in Qtenv  (recommended), you should
+install the OpenSceneGraph-devel (3.2 or later) and osgEarth-devel (2.7 or later) packages.
+These packages are not available from the official RedHat repository so you
+may need to get them from different sources (e.g. rpmfind.net).</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You may opt to use gcc and g++ instead of the clang and clang++ compilers.</p></div><p>To install additional (optional) packages for parallel simulation and
+packet capture support, type:</p><pre class="literallayout">$ su -c 'yum install openmpi-devel libpcap'</pre><p>Note that <span class="emphasis"><em>openmpi</em></span> will not be available by default, it needs to be
+activated in every session with the</p><pre class="literallayout">$ module load openmpi_&lt;arch&gt;</pre><p>command, where <code class="literal">&lt;arch&gt;</code> is your architecture (usually <code class="literal">i386</code> or <code class="literal">x86_64</code>).
+When in doubt, use <code class="literal">module avail</code> to display the list of available
+modules. If you need MPI in every session, you may add the <code class="literal">module load</code>
+command to your startup script (<code class="literal">.bashrc</code>).`</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_graphical_installation_3"></a>Graphical Installation</h3></div></div></div><p>The graphical installer can be launched by choosing
+<span class="emphasis"><em>Applications &gt; Add/Remove Software</em></span> from the menu.</p><p>Search for the following packages in the list. Select the checkboxes
+in front of the names, and pick the latest version of each package.</p><p>The packages:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+make, clang, lld, bison, flex, perl, tcl-devel, tk-devel, qt-devel,
+libxml2-devel, zlib-devel, make, doxygen, graphviz, openmpi-devel
+</li></ul></div><p>Click <span class="emphasis"><em>Apply</em></span>, then follow the instructions.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_selinux"></a>SELinux</h2></div></div></div><p>You may need to turn off SELinux when running certain simulations.
+To do so, click on <span class="emphasis"><em>System &gt; Administration &gt; Security Level &gt; Firewall</em></span>,
+go to the <span class="emphasis"><em>SELinux</em></span> tab, and choose <span class="emphasis"><em>Disabled</em></span>.</p><p>You can verify the SELinux status by typing the <code class="literal">sestatus</code> command in a terminal.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>From OMNeT&#8288;+&#8288;+ 4.1 on, makefiles that build shared libraries include the
+<code class="literal">chcon -t textrel_shlib_t lib&lt;name&gt;.so</code> command that properly sets the
+security context for the library. This should prevent the SELinux-related
+<span class="emphasis"><em>"cannot restore segment prot after reloc: Permission denied"</em></span> error from
+occurring, unless you have a shared library which was built using an obsolete
+or hand-crafted makefile that does not contain the <code class="literal">chcon</code> command.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_opensuse"></a>Chapter 8. OpenSUSE</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_supported_releases_5">Supported Releases</a></span></dt><dt><span class="section"><a href="#_opening_a_terminal_4">Opening a Terminal</a></span></dt><dt><span class="section"><a href="#_installing_the_prerequisite_packages_6">Installing the Prerequisite Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_command_line_installation_4">Command-Line Installation</a></span></dt><dt><span class="section"><a href="#_graphical_installation_4">Graphical Installation</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_supported_releases_5"></a>Supported Releases</h2></div></div></div><p>This chapter provides additional information for installing OMNeT&#8288;+&#8288;+ on
+openSUSE installations. The overall installation procedure is described
+in the <span class="emphasis"><em>Linux</em></span> chapter.</p><p>The following openSUSE release is covered:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+openSUSE Leap 15.x
+</li></ul></div><p>It was tested on the following architectures:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Intel 64-bit
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_opening_a_terminal_4"></a>Opening a Terminal</h2></div></div></div><p>Open the Search bar, and type <span class="emphasis"><em>Terminal</em></span>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_installing_the_prerequisite_packages_6"></a>Installing the Prerequisite Packages</h2></div></div></div><p>You can perform the installation using the graphical user interface or
+from the terminal, whichever you prefer.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_command_line_installation_4"></a>Command-Line Installation</h3></div></div></div><p>To install the required packages, type in the terminal:</p><pre class="literallayout">$ sudo zypper install make clang lld bison flex perl \
+    tcl-devel tk-devel libqt5-qtbase-devel libxml2-devel zlib-devel \
+    doxygen graphviz libwebkitgtk-4_0-37</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You may opt to use gcc and g++ instead of the clang and clang++ compilers.</p></div><p>To use 3D visualization support in Qtenv  (recommended), you should
+install the OpenSceneGraph-devel (3.2 or later) and osgEarth-devel (2.7 or later) packages.
+These packages are not available from the official RedHat repository so you
+may need to get them from different sources (e.g. rpmfind.net).</p><p>To enable the optional parallel simulation support you will need to install the
+MPI package:</p><pre class="literallayout">$ sudo zypper install openmpi-devel</pre><p>Note that <span class="emphasis"><em>openmpi</em></span> will not be available by default, first you need to
+log out and log in again, or source your <code class="literal">.profile</code> script:</p><pre class="literallayout">$ . ~/.profile</pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_graphical_installation_4"></a>Graphical Installation</h3></div></div></div><p>The graphical installer can be launched by opening the Search bar and typing
+<span class="emphasis"><em>Software Management</em></span>.</p><div class="figure"><a name="idm799"></a><p class="title"><b>Figure 8.1. Yast Software Management</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/opensuse-yast.png" align="middle" width="100%" alt="pictures/opensuse-yast.png"></td></tr></table></div></div></div><br class="figure-break"><p>Search for the following packages in the list. Select the checkboxes
+in front of the names, and pick the latest version of each package.</p><p>The packages:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+make, clang, lld,, bison, flex, perl, tcl-devel, tk-devel, libqt5-qtbase-devel,
+libxml2-devel, zlib-devel, doxygen, graphviz, libwebkitgtk-4_0-37,
+openmpi-devel
+</li></ul></div><p>Click <span class="emphasis"><em>Accept</em></span>, then follow the instructions.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_generic_unix"></a>Chapter 9. Generic Unix</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_introduction_2">Introduction</a></span></dt><dt><span class="section"><a href="#_dependencies">Dependencies</a></span></dt><dt><span class="section"><a href="#_determining_package_names">Determining Package Names</a></span></dt><dd><dl><dt><span class="section"><a href="#_tcl_tk">Tcl/Tk</a></span></dt><dt><span class="section"><a href="#_mpi_2">MPI</a></span></dt></dl></dd><dt><span class="section"><a href="#_downloading_and_unpacking_2">Downloading and Unpacking</a></span></dt><dt><span class="section"><a href="#_environment_variables_4">Environment Variables</a></span></dt><dt><span class="section"><a href="#_configuring_and_building_omnetpp_4">Configuring and Building OMNeT&#8288;+&#8288;+</a></span></dt><dt><span class="section"><a href="#_verifying_the_installation_4">Verifying the Installation</a></span></dt><dt><span class="section"><a href="#_starting_the_ide_4">Starting the IDE</a></span></dt><dt><span class="section"><a href="#_optional_packages">Optional Packages</a></span></dt><dd><dl><dt><span class="section"><a href="#_akaroa_4">Akaroa</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_introduction_2"></a>Introduction</h2></div></div></div><p>This chapter provides additional information for installing OMNeT&#8288;+&#8288;+
+on Unix-like operating systems not specifically covered by this
+Installation Guide. The list includes FreeBSD, Solaris, and Linux
+distributions not covered in other chapters.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>In addition to Windows and macOS, the Simulation IDE will only work
+on Linux x86 64-bit platforms. Other operating systems (FreeBSD,
+Solaris, etc.) and architectures may still be used as simulation
+platforms, without the IDE.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_dependencies"></a>Dependencies</h2></div></div></div><p>The following packages are required for OMNeT&#8288;+&#8288;+ to work:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+build-essential, GNU make, gcc, g++, bison (3.0+), flex, perl
+</span></dt><dd>
+  These packages are needed for compiling OMNeT&#8288;+&#8288;+ and simulation models,
+  and also for certain OMNeT&#8288;+&#8288;+ tools to work. C&#8288;+&#8288;+ compilers other than
+  g++, will also be accepted.
+</dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You may opt to use clang and clang++ instead of the gcc and g++ compilers.</p></div><p>The following packages are strongly recommended, because their absence
+results in severe feature loss:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+Tcl/Tk 8.5 or later
+</span></dt><dd>
+  Required by the Tkenv simulation runtime environment.
+  You need the <span class="emphasis"><em>devel</em></span> packages that include the C header files as well.
+  It is also possible to compile OMNeT&#8288;+&#8288;+ without Tcl/Tk (and Tkenv),
+  by setting then <code class="literal">WITH_TKENV=no</code> variable in configure.user.
+</dd><dt><span class="term">
+LibXML2 or Expat
+</span></dt><dd>
+  Either one of these XML parsers are needed for OMNeT&#8288;+&#8288;+ to be able
+  to read XML files. The <span class="emphasis"><em>devel</em></span> packages (that include the header files)
+  are needed. LibXML2 is the preferred one.
+</dd><dt><span class="term">
+Qt 5.4 or later
+</span></dt><dd>
+  Required by the Qtenv simulation runtime environment.
+  You need the <span class="emphasis"><em>devel</em></span> packages that include header files as well.
+</dd><dt><span class="term">
+OpenSceneGraph (3.2+) and osgEarth (2.7+)
+</span></dt><dd>
+  These packages will enable 3D visualization in Qtenv.
+  You need the <span class="emphasis"><em>devel</em></span> packages that include header files as well.
+</dd></dl></div><p>The following packages are required if you want to take advantage of some advanced
+OMNeT&#8288;+&#8288;+ features:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+GraphViz, Doxygen
+</span></dt><dd>
+  These packages are used by the NED documentation generation feature
+  of the IDE. When they are missing, documentation will have less content.
+</dd><dt><span class="term">
+MPI
+</span></dt><dd>
+  openmpi or some other MPI implementation is required to support
+      parallel simulation execution.
+</dd><dt><span class="term">
+Akaroa
+</span></dt><dd>
+  Implements Multiple Replications In Parallel (MRIP). Akaroa can be downloaded
+  from the project&#8217;s website.
+</dd></dl></div><p>The exact names of these packages may differ across distributions.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_determining_package_names"></a>Determining Package Names</h2></div></div></div><p>If you have a distro unrelated to the ones covered in this Installation Guide,
+you need to figure out what is the established way of installing packages
+on your system, and what are the names of the packages you need.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_tcl_tk"></a>Tcl/Tk</h3></div></div></div><p>Tcl/Tk may be present as separate packages (<code class="literal">tcl</code> and <code class="literal">tk</code>), or in one
+package (<code class="literal">tcltk</code>). The version number (e.g. 8.5) is usually part of the name
+in some form (<code class="literal">85</code>, <code class="literal">8.5</code>, etc). You will need the development packages, which
+are usually denoted with the <code class="literal">-dev</code> or <code class="literal">-devel</code> name suffix.</p><p>Troubleshooting:</p><p>If your platform does not have suitable Tcl/Tk and/or QT packages, you may still use OMNeT&#8288;+&#8288;+
+to run simulations from the command line. To disable the graphical runtime environment
+use:</p><pre class="literallayout">$ ./configure WITH_TKENV=no WITH_QTENV=no</pre><p>This will prevent the build system to link with Tcl/Tk or QT libraries. This is required also
+if you are installing OMNeT&#8288;+&#8288;+ from a remote terminal session.</p><p>By default, the <code class="literal">configure</code> script expects to find the Tcl/Tk libraries
+in the standard linker path (without any <code class="literal">-Ldirectory</code> linker option)
+and under the standard names (i.e. with the <code class="literal">-ltcl8.5</code> or <code class="literal">-ltcl85</code>
+linker option). If you have them in different places or under different
+names, you have to edit <code class="literal">configure.user</code> and explicitly set <code class="literal">TK_LIBS</code> there (see
+the Build Options chapter for further details).</p><p>If you get the error <span class="emphasis"><em>no display and DISPLAY environment variable not set</em></span>,
+then you&#8217;re either not running X (the <code class="literal">wish</code> command, and thus <code class="literal">./configure</code> won&#8217;t
+work just in the console) or you really need to set the <code class="literal">DISPLAY</code> variable
+(<code class="literal">export DISPLAY=:0.0</code> usually does it).</p><p>If you get the error: <span class="emphasis"><em>Tcl_Init failed: Can&#8217;t find a usable init.tcl&#8230;</em></span></p><p>The <code class="literal">TCL_LIBRARY</code> environment variable should point to the directory which
+contains <code class="literal">init.tcl</code>. That is, you probably want to put a line like</p><pre class="literallayout">export TCL_LIBRARY=/usr/lib/tcl8.5</pre><p>into your <code class="literal">~/.bashrc</code>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_mpi_2"></a>MPI</h3></div></div></div><p>OMNeT&#8288;+&#8288;+ is not sensitive to the particular MPI implementation. You may use
+OpenMPI, or any other standards-compliant MPI package.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_downloading_and_unpacking_2"></a>Downloading and Unpacking</h2></div></div></div><p>Download OMNeT&#8288;+&#8288;+ from <a class="ulink" href="http://omnetpp.org" target="_top">http://omnetpp.org</a>. Make sure you select to download
+the generic archive, <code class="literal">omnetpp-5.7-core.tgz</code>.</p><p>Copy the archive to the directory where you want to install it. This is usually
+your home directory, <code class="literal">/home/&lt;you&gt;</code>. Open a terminal, and extract the archive
+using the following command:</p><pre class="literallayout">$ tar xvfz omnetpp-5.7-core.tgz</pre><p>This will create an <code class="literal">omnetpp-5.7</code> subdirectory with the OMNeT&#8288;+&#8288;+ files in it.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_environment_variables_4"></a>Environment Variables</h2></div></div></div><p>In general OMNeT&#8288;+&#8288;+ requires that its bin directory should be in the PATH. You should
+add a line something like this to your <code class="literal">.bashrc</code>:</p><pre class="literallayout">$ export PATH=$HOME/omnetpp-5.7/bin:$PATH</pre><p>You may also have to specify the path where shared libraries are loaded from. Use:</p><pre class="literallayout">$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/omnetpp-5.7/lib</pre><p>If <code class="literal">configure</code> complains about not finding the Tcl library directory, you may specify it
+by setting the <code class="literal">TCL_LIBRARY</code> environment variable.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you use a shell other than bash, consult the man page of that shell
+to find out which startup file to edit, and how to set and export variables.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_configuring_and_building_omnetpp_4"></a>Configuring and Building OMNeT&#8288;+&#8288;+</h2></div></div></div><p>In the top-level OMNeT&#8288;+&#8288;+ directory, type:</p><pre class="literallayout">$ ./configure</pre><p>The <code class="literal">configure</code> script detects installed software and configuration of your
+system. It writes the results into the <code class="literal">Makefile.inc</code> file, which will be
+read by the makefiles during the build process.</p><div class="figure"><a name="idm938"></a><p class="title"><b>Figure 9.1. Configuring OMNeT&#8288;+&#8288;+</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/terminal-configuration.png" align="middle" width="100%" alt="pictures/terminal-configuration.png"></td></tr></table></div></div></div><br class="figure-break"><p>Normally, the <code class="literal">configure</code> script needs to be running under the graphical
+environment (X11) in order to test for <code class="literal">wish</code>, the Tcl/Tk shell. If you are logged in
+via an ssh session, or there is some other reason why X is not running,
+the easiest way to work around the problem is to tell OMNeT&#8288;+&#8288;+ to build
+without Tcl/Tk. To do that, use the command</p><pre class="literallayout">$ ./configure WITH_TKENV=no WITH_QTENV=no</pre><p>instead of plain <code class="literal">./configure</code>.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If there is an error during <code class="literal">configure</code>, the output may give hints about what
+went wrong. Scroll up to see the messages. (Use Shift+PgUp; you may need to increase
+the scrollback buffer size of the terminal and re-run <code class="literal">./configure</code>.) The script
+also writes a very detailed log of its operation into <code class="literal">config.log</code> to help track
+down errors. Since <code class="literal">config.log</code> is very long, it is recommended that you open
+it in an editor and search for phrases like <span class="emphasis"><em>error</em></span> or the name of the package
+associated with the problem.</p><p>The <code class="literal">configure</code> script tries to build and run small test programs that are using
+specific libraries or features of the system. You can check the <code class="literal">config.log</code> file
+to see which test program has failed and why. In most cases the problem is that the
+script cannot figure out the location of a specific library. Specifying the include file
+or library location in the <code class="literal">configure.user</code> file and then re-running the <code class="literal">configure</code> script
+usually solves the problem.</p></div><p>When <code class="literal">./configure</code> has finished, you can compile OMNeT&#8288;+&#8288;+.
+Type in the terminal:</p><pre class="literallayout">$ make</pre><div class="figure"><a name="idm966"></a><p class="title"><b>Figure 9.2. Building OMNeT&#8288;+&#8288;+</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/terminal-make.png" align="middle" width="100%" alt="pictures/terminal-make.png"></td></tr></table></div></div></div><br class="figure-break"><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>To take advantage of multiple processor cores, add the <code class="literal">-j8</code> option
+(for 8 cores) to the <code class="literal">make</code> command line.</p></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The build process will not write anything outside its directory,
+so no special privileges are needed.</p></div><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>The make command will seemingly compile everything twice. This is because
+both debug and optimized versions of the libraries are built.
+If you only want to build one set of the libraries, specify
+<code class="literal">MODE=debug</code> or <code class="literal">MODE=release</code>:</p><pre class="literallayout">$ make MODE=release</pre></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_verifying_the_installation_4"></a>Verifying the Installation</h2></div></div></div><p>You can now verify that the sample simulations run correctly. For example,
+the aloha simulation is started by entering the following commands:</p><pre class="literallayout">$ cd samples/aloha
+$ ./aloha</pre><p>By default, the samples will run using the Qtenv environment. You should see
+nice gui windows and dialogs.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_starting_the_ide_4"></a>Starting the IDE</h2></div></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The IDE is supported only on 64-bit versions of Windows, macOS X and Linux.</p></div><p>You can run the IDE by typing the following command in the terminal:</p><pre class="literallayout">$ omnetpp</pre><div class="figure"><a name="idm995"></a><p class="title"><b>Figure 9.3. The Simulation IDE</b></p><div class="figure-contents"><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75%"><tr><td align="center"><img src="pictures/ide-initial.png" align="middle" width="100%" alt="pictures/ide-initial.png"></td></tr></table></div></div></div><br class="figure-break"><p>If you would like to be able to access the IDE from the application launcher or via
+a desktop shortcut, run one or both of the commands below:</p><pre class="literallayout">$ make install-menu-item
+$ make install-desktop-icon</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The above commands assume that your system has the <code class="literal">xdg</code> commands,
+which most modern distributions do.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_optional_packages"></a>Optional Packages</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="_akaroa_4"></a>Akaroa</h3></div></div></div><p>If you wish to use Akaroa, it must be downloaded, compiled, and installed
+manually before installing OMNeT&#8288;+&#8288;+.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>As of version 2.7.9, Akaroa only supports Linux and Solaris.</p></div><p>Download Akaroa 2.7.9 from:
+  <a class="ulink" href="http://www.cosc.canterbury.ac.nz/research/RG/net_sim/simulation_group/akaroa/download.chtml" target="_top">http://www.cosc.canterbury.ac.nz/research/RG/net_sim/simulation_group/akaroa/download.chtml</a></p><p>Extract it into a temporary directory:</p><pre class="literallayout">$ tar xfz akaroa-2.7.9.tar.gz</pre><p>Configure, build and install the Akaroa library. By default, it will be installed into the
+<code class="literal">/usr/local/akaroa</code> directory.</p><pre class="literallayout">$ ./configure
+$ make
+$ sudo make install</pre><p>Go to the OMNeT&#8288;+&#8288;+ directory, and (re-)run the <code class="literal">configure</code> script. Akaroa will be
+automatically detected if you installed it to the default location.</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="_build_options"></a>Chapter 10. Build Options</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#_configure_user_options">Configure.user Options</a></span></dt><dt><span class="section"><a href="#_moving_the_installation">Moving the Installation</a></span></dt><dt><span class="section"><a href="#_using_different_compilers">Using Different Compilers</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_configure_user_options"></a>Configure.user Options</h2></div></div></div><p>The <code class="literal">configure.user</code> file contains several options that can be used to fine-tune
+the simulation libraries.</p><p>You always need to re-run the <code class="literal">configure</code> script in the installation
+root after changing the <code class="literal">configure.user</code> file.</p><pre class="literallayout">$ ./configure</pre><p>After this step, you have to remove all previous libraries and recompile OMNeT&#8288;+&#8288;+:</p><pre class="literallayout">$ make cleanall
+$ make</pre><p>Options:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">PREFER_CLANG=no</code>
+</span></dt><dd>
+  If both <code class="literal">gcc</code> and <code class="literal">clang</code> are installed on your system, setting this variable to <code class="literal">no</code>
+  will force the configure script to use <code class="literal">gcc</code> as C&#8288;+&#8288;+ compiler.
+</dd><dt><span class="term">
+<code class="literal">&lt;COMPONENTNAME&gt;_CFLAGS</code>, <code class="literal">&lt;COMPONENTNAME&gt;_LIBS</code>
+</span></dt><dd>
+  The <code class="literal">configure.user</code> file contains variables for defining the compile and link options
+  needed by various external libraries. By default, the <code class="literal">configure</code> command detects these
+  automatically, but you may override the auto detection by specifying the values by hand.
+  (e.g. <code class="literal">&lt;COMP&gt;_CFLAGS=-I/path/to/comp/includedir</code> and <code class="literal">&lt;COMP&gt;_LIBS=-L/path/to/comp/libdir -lnameoflib</code>.)
+</dd><dt><span class="term">
+<code class="literal">WITH_PARSIM=no</code>
+</span></dt><dd>
+  Use this variable to explicitly disable parallel simulation support in OMNeT&#8288;+&#8288;+.
+</dd><dt><span class="term">
+<code class="literal">WITH_NETBUILDER=no</code>
+</span></dt><dd>
+  This option allows you to leave out the NED language parser and
+  the network builder. (This is needed only if you are building your network with
+  C&#8288;+&#8288;+ API calls and you do not use the built-in NED language parser at all.)
+</dd><dt><span class="term">
+<code class="literal">WITH_TKENV=no</code>
+</span></dt><dd>
+  This will prevent the build system to link with Tcl/Tk libraries. Use this option
+  if your platform does not have a suitable Tcl/Tk package or you will run the simulation
+  only in command line mode. (i.e. You want to run OMNeT&#8288;+&#8288;+ in a remote terminal session.)
+</dd><dt><span class="term">
+<code class="literal">WITH_QTENV=no</code>
+</span></dt><dd>
+  This will prevent the build system to link with the Qt libraries. Use this option
+  if your platform does not have a suitable Qt package or you will run the simulation
+  only in command line mode. (i.e. You want to run OMNeT&#8288;+&#8288;+ in a remote terminal session.)
+</dd><dt><span class="term">
+<code class="literal">WITH_OSG=no</code>
+</span></dt><dd>
+  This will prevent the build system to use OpenScreenGraph which is used for 3D
+  visualization in Qtenv.
+</dd><dt><span class="term">
+<code class="literal">WITH_OSGEARTH=no</code>
+</span></dt><dd>
+    This will prevent the build system to use osgEarth which is used for 2D/3D
+    mapping and visualization in Qtenv.
+</dd><dt><span class="term">
+<code class="literal">PREFER_QTENV=no</code>
+</span></dt><dd>
+  Use Tkenv as the default graphical runtime instead of Qtenv.
+</dd><dt><span class="term">
+<code class="literal">EMBED_TCL_CODE=no</code>
+</span></dt><dd>
+  Tcl/Tk is a script language and the source of the graphical
+  runtime environment is stored as <code class="literal">.tcl</code> files in the <code class="literal">src/tkenv</code> directory.
+  By default, these files are not used directly, but are embedded as string literals
+  in the executable file. Setting <code class="literal">EMBED_TCL_CODE=yes</code> allows you to move the
+  OMNeT&#8288;+&#8288;+ installation without caring about the location of the <code class="literal">.tcl</code> files.
+  If you want to make changes to the Tcl code, you better switch off the embedding with
+  the <code class="literal">EMBED_TCL_CODE=no</code> option. This way you can make changes to the <code class="literal">.tcl</code>
+  files and see the changes immediately without recompiling the OMNeT&#8288;+&#8288;+ libraries.
+</dd><dt><span class="term">
+<code class="literal">CFLAGS_[RELEASE/DEBUG]</code>
+</span></dt><dd>
+  To change the compiler command line options the build process is using, you
+  should specify them in the <code class="literal">CFLAGS_RELEASE</code> and <code class="literal">CFLAGS_DEBUG</code> variables.
+  By default, the flags required for debugging or optimization are detected
+  automatically by the <code class="literal">configure</code> script. If you set them manually, you
+  should specify all options you need. It is recommended to check what options are
+  detected automatically (check the <code class="literal">Makefile.inc</code> after running <code class="literal">configure</code> and
+  look for the <code class="literal">CFLAGS_[RELEASE/DEBUG]</code> variables.) and add/modify
+  those options manually in the <code class="literal">configure.user</code> file.
+</dd><dt><span class="term">
+<code class="literal">LDFLAGS</code>
+</span></dt><dd>
+  Linker command line options can be explicitly set using this variable.
+  It is recommended to check what options are detected automatically
+  (check the <code class="literal">Makefile.inc</code> after running <code class="literal">configure</code> and
+  look for the <code class="literal">LDFLAGS</code> variable.) and add/modify those options manually in
+  the <code class="literal">configure.user</code> file.
+</dd><dt><span class="term">
+<code class="literal">SHARED_LIBS</code>
+</span></dt><dd>
+  This variable controls whether the OMNeT&#8288;+&#8288;+ build process will create
+  static or dynamic libraries. By default, the OMNeT&#8288;+&#8288;+ runtime is built as a set of shared libraries.
+  If you want to build a single executable from your simulation, specify <code class="literal">SHARED_LIBS=no</code>
+  in <code class="literal">configure.user</code> to create static OMNeT&#8288;+&#8288;+ libraries and then reconfigure (<code class="literal">./configure</code>)
+  and recompile OMNeT&#8288;+&#8288;+ (<code class="literal">make cleanall; make</code>). Once the OMNeT&#8288;+&#8288;+ static libraries are
+  correctly built, your own project have to be rebuilt, too. You will get a single, statically
+  linked executable, which requires only the NED and INI files to run.
+</dd></dl></div><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>It is important to completely delete the OMNeT&#8288;+&#8288;+ libraries (<code class="literal">make cleanall</code>)
+and then rebuild them, otherwise it cannot be guaranteed that the created simulations
+are linked against the correct libraries.</p></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The <code class="literal">USE_DOUBLE_SIMTIME</code> and <code class="literal">WITHOUT_CPACKET</code> options are no longer supported.
+They were introduced in OMNeT&#8288;+&#8288;+ 4.0 to help porting model code from OMNeT&#8288;+&#8288;+ 3.x,
+and having fulfilled their role, they were removed in OMNeT&#8288;+&#8288;+ 5.0. If you still have
+old model code to port, use OMNeT&#8288;+&#8288;+ 4.x.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_moving_the_installation"></a>Moving the Installation</h2></div></div></div><p>When you build OMNeT&#8288;+&#8288;+ on your machine, several directory names are compiled
+into the binaries. This makes it easier to set up OMNeT&#8288;+&#8288;+ in the first place,
+but if you rename the installation directory or move it to another location in
+the file system, the built-in paths become invalid and the correct paths have
+to be supplied via environment variables.</p><p>The following environment variables are affected (in addition to <code class="literal">PATH</code>, which
+also needs to be adjusted):</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">OMNETPP_IMAGE_PATH</code>
+</span></dt><dd>
+  This variable contains the list of directories where Tkenv looks for icons.
+  Set it to point to the <code class="literal">images/</code> subdirectory of your OMNeT&#8288;+&#8288;+ installation.
+</dd><dt><span class="term">
+<code class="literal">OMNETPP_TKENV_DIR</code>
+</span></dt><dd>
+  This variable points to the directory that contains the Tcl script parts
+  of Tkenv, which is by default the <code class="literal">src/tkenv/</code> subdirectory
+  of your OMNeT&#8288;+&#8288;+ installation. Normally you don&#8217;t need to set this variable,
+  because the Tkenv shared library contains all Tcl code compiled in as
+  string literals. However, if you compile OMNeT&#8288;+&#8288;+ with the <code class="literal">EMBED_TCL_CODE=no</code>
+  setting and then you move the installation, then you need to set
+  <code class="literal">OMNETPP_TKENV_DIR</code>, otherwise Tkenv won&#8217;t start.
+</dd><dt><span class="term">
+<code class="literal">LD_LIBRARY_PATH</code>
+</span></dt><dd>
+  This variable contains the list of additional directories where shared
+  libraries are looked for. Initially, <code class="literal">LD_LIBRARY_PATH</code> is not needed
+  because shared libraries are located via the <span class="emphasis"><em>rpath</em></span> mechanism. When you
+  move the installation, you need to add the <code class="literal">lib/</code> subdirectory
+  of your OMNeT&#8288;+&#8288;+ installation to <code class="literal">LD_LIBRARY_PATH</code>.
+</dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>On macOS, <code class="literal">DYLD_LIBRARY_PATH</code> is used instead of <code class="literal">LD_LIBRARY_PATH</code>.
+On Windows, the <code class="literal">PATH</code> variable must contain the directory where shared
+libraries (DLLs) are present.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="_using_different_compilers"></a>Using Different Compilers</h2></div></div></div><p>By default, the configure script detects the following compilers automatically in the path:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Intel compiler (icc, icpc)
+</li><li class="listitem">
+GNU C/C&#8288;+&#8288;+ (gcc, g++)
+</li><li class="listitem">
+Clang (clang, clang++)
+</li><li class="listitem">
+Clang/C2 (from Microsoft Visual Studio)
+</li><li class="listitem">
+Sun Studio (cc, cxx)
+</li><li class="listitem">
+IBM compiler (xlc, xlC)
+</li></ul></div><p>If you want to use compilers other than the above ones, you should
+specify the compiler name in the <code class="literal">CC</code> and <code class="literal">CXX</code> variables, and re-run the
+configuration script.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Different compilers may have different command line options. If you use a compiler
+  other than the default <code class="literal">gcc</code>, you may have to revise the <code class="literal">CFLAGS_[RELEASE/DEBUG]</code> and
+  <code class="literal">LDFLAGS</code> variables.</p></div></div></div></div></body></html>

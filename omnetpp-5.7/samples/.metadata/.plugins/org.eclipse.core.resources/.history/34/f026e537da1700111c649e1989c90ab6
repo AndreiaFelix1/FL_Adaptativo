@@ -1,0 +1,930 @@
+[General]
+cmdenv-express-mode = true
+cmdenv-autoflush = true
+cmdenv-status-frequency = 1s
+**.cmdenv-log-level = info
+
+#repeat = 10
+#seed-set = ${repetition}
+
+image-path = ../../images
+
+network = SimpleScenario
+
+##########################################################
+#            Simulation parameters                       #
+##########################################################
+debug-on-errors = true
+print-undisposed = true
+
+sim-time-limit = 21800s
+
+**.scalar-recording = true
+**.vector-recording = true
+
+*.playgroundSizeX = 25000m
+*.playgroundSizeY = 25000m
+*.playgroundSizeZ = 50m
+
+##########################################################
+# Annotation parameters                                  #
+##########################################################
+*.annotations.draw = true
+
+##########################################################
+#            TraCIScenarioManager parameters             #
+##########################################################
+*.manager.updateInterval = 1s
+*.manager.host = "localhost"
+*.manager.port = 9999
+*.manager.autoShutdown = true
+*.manager.launchConfig = xmldoc("100_0.launchd.xml")
+*.manager.allowPedestrians = false
+
+##########################################################
+#                       RSU SETTINGS                     #
+#                                                        #
+#                                                        #
+##########################################################
+
+*.rsu[0].mobility.x = 6000
+*.rsu[0].mobility.y = 14000
+*.rsu[0].mobility.z = 3
+
+*.rsu[1].mobility.x = 6642
+*.rsu[1].mobility.y = 14000
+*.rsu[1].mobility.z = 3
+
+*.rsu[2].mobility.x = 7285
+*.rsu[2].mobility.y = 14000
+*.rsu[2].mobility.z = 3
+
+*.rsu[3].mobility.x = 7928
+*.rsu[3].mobility.y = 14000
+*.rsu[3].mobility.z = 3
+
+*.rsu[4].mobility.x = 8571
+*.rsu[4].mobility.y = 14000
+*.rsu[4].mobility.z = 3
+
+*.rsu[5].mobility.x = 9214
+*.rsu[5].mobility.y = 14000
+*.rsu[5].mobility.z = 3
+
+*.rsu[6].mobility.x = 9857
+*.rsu[6].mobility.y = 14000
+*.rsu[6].mobility.z = 3
+
+*.rsu[7].mobility.x = 10500
+*.rsu[7].mobility.y = 14000
+*.rsu[7].mobility.z = 3
+
+*.rsu[8].mobility.x = 11142
+*.rsu[8].mobility.y = 14000
+*.rsu[8].mobility.z = 3
+
+*.rsu[9].mobility.x = 11785
+*.rsu[9].mobility.y = 14000
+*.rsu[9].mobility.z = 3
+
+*.rsu[10].mobility.x = 12428
+*.rsu[10].mobility.y = 14000
+*.rsu[10].mobility.z = 3
+
+*.rsu[11].mobility.x = 13071
+*.rsu[11].mobility.y = 14000
+*.rsu[11].mobility.z = 3
+
+*.rsu[12].mobility.x = 13714
+*.rsu[12].mobility.y = 14000
+*.rsu[12].mobility.z = 3
+
+*.rsu[13].mobility.x = 14357
+*.rsu[13].mobility.y = 14000
+*.rsu[13].mobility.z = 3
+
+*.rsu[14].mobility.x = 15000
+*.rsu[14].mobility.y = 14000
+*.rsu[14].mobility.z = 3
+
+*.rsu[15].mobility.x = 6000
+*.rsu[15].mobility.y = 14571
+*.rsu[15].mobility.z = 3
+
+*.rsu[16].mobility.x = 6642
+*.rsu[16].mobility.y = 14571
+*.rsu[16].mobility.z = 3
+
+*.rsu[17].mobility.x = 7285
+*.rsu[17].mobility.y = 14571
+*.rsu[17].mobility.z = 3
+
+*.rsu[18].mobility.x = 7928
+*.rsu[18].mobility.y = 14571
+*.rsu[18].mobility.z = 3
+
+*.rsu[19].mobility.x = 8571
+*.rsu[19].mobility.y = 14571
+*.rsu[19].mobility.z = 3
+
+*.rsu[20].mobility.x = 9214
+*.rsu[20].mobility.y = 14571
+*.rsu[20].mobility.z = 3
+
+*.rsu[21].mobility.x = 9857
+*.rsu[21].mobility.y = 14571
+*.rsu[21].mobility.z = 3
+
+*.rsu[22].mobility.x = 10500
+*.rsu[22].mobility.y = 14571
+*.rsu[22].mobility.z = 3
+
+*.rsu[23].mobility.x = 11142
+*.rsu[23].mobility.y = 14571
+*.rsu[23].mobility.z = 3
+
+*.rsu[24].mobility.x = 11785
+*.rsu[24].mobility.y = 14571
+*.rsu[24].mobility.z = 3
+
+*.rsu[25].mobility.x = 12428
+*.rsu[25].mobility.y = 14571
+*.rsu[25].mobility.z = 3
+
+*.rsu[26].mobility.x = 13071
+*.rsu[26].mobility.y = 14571
+*.rsu[26].mobility.z = 3
+
+*.rsu[27].mobility.x = 13714
+*.rsu[27].mobility.y = 14571
+*.rsu[27].mobility.z = 3
+
+*.rsu[28].mobility.x = 14357
+*.rsu[28].mobility.y = 14571
+*.rsu[28].mobility.z = 3
+
+*.rsu[29].mobility.x = 15000
+*.rsu[29].mobility.y = 14571
+*.rsu[29].mobility.z = 3
+
+*.rsu[30].mobility.x = 6000
+*.rsu[30].mobility.y = 15142
+*.rsu[30].mobility.z = 3
+
+*.rsu[31].mobility.x = 6642
+*.rsu[31].mobility.y = 15142
+*.rsu[31].mobility.z = 3
+
+*.rsu[32].mobility.x = 7285
+*.rsu[32].mobility.y = 15142
+*.rsu[32].mobility.z = 3
+
+*.rsu[33].mobility.x = 7928
+*.rsu[33].mobility.y = 15142
+*.rsu[33].mobility.z = 3
+
+*.rsu[34].mobility.x = 8571
+*.rsu[34].mobility.y = 15142
+*.rsu[34].mobility.z = 3
+
+*.rsu[35].mobility.x = 9214
+*.rsu[35].mobility.y = 15142
+*.rsu[35].mobility.z = 3
+
+*.rsu[36].mobility.x = 9857
+*.rsu[36].mobility.y = 15142
+*.rsu[36].mobility.z = 3
+
+*.rsu[37].mobility.x = 10500
+*.rsu[37].mobility.y = 15142
+*.rsu[37].mobility.z = 3
+
+*.rsu[38].mobility.x = 11142
+*.rsu[38].mobility.y = 15142
+*.rsu[38].mobility.z = 3
+
+*.rsu[39].mobility.x = 11785
+*.rsu[39].mobility.y = 15142
+*.rsu[39].mobility.z = 3
+
+*.rsu[40].mobility.x = 12428
+*.rsu[40].mobility.y = 15142
+*.rsu[40].mobility.z = 3
+
+*.rsu[41].mobility.x = 13071
+*.rsu[41].mobility.y = 15142
+*.rsu[41].mobility.z = 3
+
+*.rsu[42].mobility.x = 13714
+*.rsu[42].mobility.y = 15142
+*.rsu[42].mobility.z = 3
+
+*.rsu[43].mobility.x = 14357
+*.rsu[43].mobility.y = 15142
+*.rsu[43].mobility.z = 3
+
+*.rsu[44].mobility.x = 15000
+*.rsu[44].mobility.y = 15142
+*.rsu[44].mobility.z = 3
+
+*.rsu[45].mobility.x = 6000
+*.rsu[45].mobility.y = 15714
+*.rsu[45].mobility.z = 3
+
+*.rsu[46].mobility.x = 6642
+*.rsu[46].mobility.y = 15714
+*.rsu[46].mobility.z = 3
+
+*.rsu[47].mobility.x = 7285
+*.rsu[47].mobility.y = 15714
+*.rsu[47].mobility.z = 3
+
+*.rsu[48].mobility.x = 7928
+*.rsu[48].mobility.y = 15714
+*.rsu[48].mobility.z = 3
+
+*.rsu[49].mobility.x = 8571
+*.rsu[49].mobility.y = 15714
+*.rsu[49].mobility.z = 3
+
+*.rsu[50].mobility.x = 9214
+*.rsu[50].mobility.y = 15714
+*.rsu[50].mobility.z = 3
+
+*.rsu[51].mobility.x = 9857
+*.rsu[51].mobility.y = 15714
+*.rsu[51].mobility.z = 3
+
+*.rsu[52].mobility.x = 10500
+*.rsu[52].mobility.y = 15714
+*.rsu[52].mobility.z = 3
+
+*.rsu[53].mobility.x = 11142
+*.rsu[53].mobility.y = 15714
+*.rsu[53].mobility.z = 3
+
+*.rsu[54].mobility.x = 11785
+*.rsu[54].mobility.y = 15714
+*.rsu[54].mobility.z = 3
+
+*.rsu[55].mobility.x = 12428
+*.rsu[55].mobility.y = 15714
+*.rsu[55].mobility.z = 3
+
+*.rsu[56].mobility.x = 13071
+*.rsu[56].mobility.y = 15714
+*.rsu[56].mobility.z = 3
+
+*.rsu[57].mobility.x = 13714
+*.rsu[57].mobility.y = 15714
+*.rsu[57].mobility.z = 3
+
+*.rsu[58].mobility.x = 14357
+*.rsu[58].mobility.y = 15714
+*.rsu[58].mobility.z = 3
+
+*.rsu[59].mobility.x = 15000
+*.rsu[59].mobility.y = 15714
+*.rsu[59].mobility.z = 3
+
+*.rsu[60].mobility.x = 6000
+*.rsu[60].mobility.y = 16285
+*.rsu[60].mobility.z = 3
+
+*.rsu[61].mobility.x = 6642
+*.rsu[61].mobility.y = 16285
+*.rsu[61].mobility.z = 3
+
+*.rsu[62].mobility.x = 7285
+*.rsu[62].mobility.y = 16285
+*.rsu[62].mobility.z = 3
+
+*.rsu[63].mobility.x = 7928
+*.rsu[63].mobility.y = 16285
+*.rsu[63].mobility.z = 3
+
+*.rsu[64].mobility.x = 8571
+*.rsu[64].mobility.y = 16285
+*.rsu[64].mobility.z = 3
+
+*.rsu[65].mobility.x = 9214
+*.rsu[65].mobility.y = 16285
+*.rsu[65].mobility.z = 3
+
+*.rsu[66].mobility.x = 9857
+*.rsu[66].mobility.y = 16285
+*.rsu[66].mobility.z = 3
+
+*.rsu[67].mobility.x = 10500
+*.rsu[67].mobility.y = 16285
+*.rsu[67].mobility.z = 3
+
+*.rsu[68].mobility.x = 11142
+*.rsu[68].mobility.y = 16285
+*.rsu[68].mobility.z = 3
+
+*.rsu[69].mobility.x = 11785
+*.rsu[69].mobility.y = 16285
+*.rsu[69].mobility.z = 3
+
+*.rsu[70].mobility.x = 12428
+*.rsu[70].mobility.y = 16285
+*.rsu[70].mobility.z = 3
+
+*.rsu[71].mobility.x = 13071
+*.rsu[71].mobility.y = 16285
+*.rsu[71].mobility.z = 3
+
+*.rsu[72].mobility.x = 13714
+*.rsu[72].mobility.y = 16285
+*.rsu[72].mobility.z = 3
+
+*.rsu[73].mobility.x = 14357
+*.rsu[73].mobility.y = 16285
+*.rsu[73].mobility.z = 3
+
+*.rsu[74].mobility.x = 15000
+*.rsu[74].mobility.y = 16285
+*.rsu[74].mobility.z = 3
+
+*.rsu[75].mobility.x = 6000
+*.rsu[75].mobility.y = 16857
+*.rsu[75].mobility.z = 3
+
+*.rsu[76].mobility.x = 6642
+*.rsu[76].mobility.y = 16857
+*.rsu[76].mobility.z = 3
+
+*.rsu[77].mobility.x = 7285
+*.rsu[77].mobility.y = 16857
+*.rsu[77].mobility.z = 3
+
+*.rsu[78].mobility.x = 7928
+*.rsu[78].mobility.y = 16857
+*.rsu[78].mobility.z = 3
+
+*.rsu[79].mobility.x = 8571
+*.rsu[79].mobility.y = 16857
+*.rsu[79].mobility.z = 3
+
+*.rsu[80].mobility.x = 9214
+*.rsu[80].mobility.y = 16857
+*.rsu[80].mobility.z = 3
+
+*.rsu[81].mobility.x = 9857
+*.rsu[81].mobility.y = 16857
+*.rsu[81].mobility.z = 3
+
+*.rsu[82].mobility.x = 10500
+*.rsu[82].mobility.y = 16857
+*.rsu[82].mobility.z = 3
+
+*.rsu[83].mobility.x = 11142
+*.rsu[83].mobility.y = 16857
+*.rsu[83].mobility.z = 3
+
+*.rsu[84].mobility.x = 11785
+*.rsu[84].mobility.y = 16857
+*.rsu[84].mobility.z = 3
+
+*.rsu[85].mobility.x = 12428
+*.rsu[85].mobility.y = 16857
+*.rsu[85].mobility.z = 3
+
+*.rsu[86].mobility.x = 13071
+*.rsu[86].mobility.y = 16857
+*.rsu[86].mobility.z = 3
+
+*.rsu[87].mobility.x = 13714
+*.rsu[87].mobility.y = 16857
+*.rsu[87].mobility.z = 3
+
+*.rsu[88].mobility.x = 14357
+*.rsu[88].mobility.y = 16857
+*.rsu[88].mobility.z = 3
+
+*.rsu[89].mobility.x = 15000
+*.rsu[89].mobility.y = 16857
+*.rsu[89].mobility.z = 3
+
+*.rsu[90].mobility.x = 6000
+*.rsu[90].mobility.y = 17428
+*.rsu[90].mobility.z = 3
+
+*.rsu[91].mobility.x = 6642
+*.rsu[91].mobility.y = 17428
+*.rsu[91].mobility.z = 3
+
+*.rsu[92].mobility.x = 7285
+*.rsu[92].mobility.y = 17428
+*.rsu[92].mobility.z = 3
+
+*.rsu[93].mobility.x = 7928
+*.rsu[93].mobility.y = 17428
+*.rsu[93].mobility.z = 3
+
+*.rsu[94].mobility.x = 8571
+*.rsu[94].mobility.y = 17428
+*.rsu[94].mobility.z = 3
+
+*.rsu[95].mobility.x = 9214
+*.rsu[95].mobility.y = 17428
+*.rsu[95].mobility.z = 3
+
+*.rsu[96].mobility.x = 9857
+*.rsu[96].mobility.y = 17428
+*.rsu[96].mobility.z = 3
+
+*.rsu[97].mobility.x = 10500
+*.rsu[97].mobility.y = 17428
+*.rsu[97].mobility.z = 3
+
+*.rsu[98].mobility.x = 11142
+*.rsu[98].mobility.y = 17428
+*.rsu[98].mobility.z = 3
+
+*.rsu[99].mobility.x = 11785
+*.rsu[99].mobility.y = 17428
+*.rsu[99].mobility.z = 3
+
+*.rsu[100].mobility.x = 12428
+*.rsu[100].mobility.y = 17428
+*.rsu[100].mobility.z = 3
+
+*.rsu[101].mobility.x = 13071
+*.rsu[101].mobility.y = 17428
+*.rsu[101].mobility.z = 3
+
+*.rsu[102].mobility.x = 13714
+*.rsu[102].mobility.y = 17428
+*.rsu[102].mobility.z = 3
+
+*.rsu[103].mobility.x = 14357
+*.rsu[103].mobility.y = 17428
+*.rsu[103].mobility.z = 3
+
+*.rsu[104].mobility.x = 15000
+*.rsu[104].mobility.y = 17428
+*.rsu[104].mobility.z = 3
+
+*.rsu[105].mobility.x = 6000
+*.rsu[105].mobility.y = 18000
+*.rsu[105].mobility.z = 3
+
+*.rsu[106].mobility.x = 6642
+*.rsu[106].mobility.y = 18000
+*.rsu[106].mobility.z = 3
+
+*.rsu[107].mobility.x = 7285
+*.rsu[107].mobility.y = 18000
+*.rsu[107].mobility.z = 3
+
+*.rsu[108].mobility.x = 7928
+*.rsu[108].mobility.y = 18000
+*.rsu[108].mobility.z = 3
+
+*.rsu[109].mobility.x = 8571
+*.rsu[109].mobility.y = 18000
+*.rsu[109].mobility.z = 3
+
+*.rsu[110].mobility.x = 9214
+*.rsu[110].mobility.y = 18000
+*.rsu[110].mobility.z = 3
+
+*.rsu[111].mobility.x = 9857
+*.rsu[111].mobility.y = 18000
+*.rsu[111].mobility.z = 3
+
+*.rsu[112].mobility.x = 10500
+*.rsu[112].mobility.y = 18000
+*.rsu[112].mobility.z = 3
+
+*.rsu[113].mobility.x = 11142
+*.rsu[113].mobility.y = 18000
+*.rsu[113].mobility.z = 3
+
+*.rsu[114].mobility.x = 11785
+*.rsu[114].mobility.y = 18000
+*.rsu[114].mobility.z = 3
+
+*.rsu[115].mobility.x = 12428
+*.rsu[115].mobility.y = 18000
+*.rsu[115].mobility.z = 3
+
+*.rsu[116].mobility.x = 13071
+*.rsu[116].mobility.y = 18000
+*.rsu[116].mobility.z = 3
+
+*.rsu[117].mobility.x = 13714
+*.rsu[117].mobility.y = 18000
+*.rsu[117].mobility.z = 3
+
+*.rsu[118].mobility.x = 14357
+*.rsu[118].mobility.y = 18000
+*.rsu[118].mobility.z = 3
+
+*.rsu[119].mobility.x = 15000
+*.rsu[119].mobility.y = 18000
+*.rsu[119].mobility.z = 3
+
+*.rsu[120].mobility.x = 6000
+*.rsu[120].mobility.y = 18571
+*.rsu[120].mobility.z = 3
+
+*.rsu[121].mobility.x = 6642
+*.rsu[121].mobility.y = 18571
+*.rsu[121].mobility.z = 3
+
+*.rsu[122].mobility.x = 7285
+*.rsu[122].mobility.y = 18571
+*.rsu[122].mobility.z = 3
+
+*.rsu[123].mobility.x = 7928
+*.rsu[123].mobility.y = 18571
+*.rsu[123].mobility.z = 3
+
+*.rsu[124].mobility.x = 8571
+*.rsu[124].mobility.y = 18571
+*.rsu[124].mobility.z = 3
+
+*.rsu[125].mobility.x = 9214
+*.rsu[125].mobility.y = 18571
+*.rsu[125].mobility.z = 3
+
+*.rsu[126].mobility.x = 9857
+*.rsu[126].mobility.y = 18571
+*.rsu[126].mobility.z = 3
+
+*.rsu[127].mobility.x = 10500
+*.rsu[127].mobility.y = 18571
+*.rsu[127].mobility.z = 3
+
+*.rsu[128].mobility.x = 11142
+*.rsu[128].mobility.y = 18571
+*.rsu[128].mobility.z = 3
+
+*.rsu[129].mobility.x = 11785
+*.rsu[129].mobility.y = 18571
+*.rsu[129].mobility.z = 3
+
+*.rsu[130].mobility.x = 12428
+*.rsu[130].mobility.y = 18571
+*.rsu[130].mobility.z = 3
+
+*.rsu[131].mobility.x = 13071
+*.rsu[131].mobility.y = 18571
+*.rsu[131].mobility.z = 3
+
+*.rsu[132].mobility.x = 13714
+*.rsu[132].mobility.y = 18571
+*.rsu[132].mobility.z = 3
+
+*.rsu[133].mobility.x = 14357
+*.rsu[133].mobility.y = 18571
+*.rsu[133].mobility.z = 3
+
+*.rsu[134].mobility.x = 15000
+*.rsu[134].mobility.y = 18571
+*.rsu[134].mobility.z = 3
+
+*.rsu[135].mobility.x = 6000
+*.rsu[135].mobility.y = 19142
+*.rsu[135].mobility.z = 3
+
+*.rsu[136].mobility.x = 6642
+*.rsu[136].mobility.y = 19142
+*.rsu[136].mobility.z = 3
+
+*.rsu[137].mobility.x = 7285
+*.rsu[137].mobility.y = 19142
+*.rsu[137].mobility.z = 3
+
+*.rsu[138].mobility.x = 7928
+*.rsu[138].mobility.y = 19142
+*.rsu[138].mobility.z = 3
+
+*.rsu[139].mobility.x = 8571
+*.rsu[139].mobility.y = 19142
+*.rsu[139].mobility.z = 3
+
+*.rsu[140].mobility.x = 9214
+*.rsu[140].mobility.y = 19142
+*.rsu[140].mobility.z = 3
+
+*.rsu[141].mobility.x = 9857
+*.rsu[141].mobility.y = 19142
+*.rsu[141].mobility.z = 3
+
+*.rsu[142].mobility.x = 10500
+*.rsu[142].mobility.y = 19142
+*.rsu[142].mobility.z = 3
+
+*.rsu[143].mobility.x = 11142
+*.rsu[143].mobility.y = 19142
+*.rsu[143].mobility.z = 3
+
+*.rsu[144].mobility.x = 11785
+*.rsu[144].mobility.y = 19142
+*.rsu[144].mobility.z = 3
+
+*.rsu[145].mobility.x = 12428
+*.rsu[145].mobility.y = 19142
+*.rsu[145].mobility.z = 3
+
+*.rsu[146].mobility.x = 13071
+*.rsu[146].mobility.y = 19142
+*.rsu[146].mobility.z = 3
+
+*.rsu[147].mobility.x = 13714
+*.rsu[147].mobility.y = 19142
+*.rsu[147].mobility.z = 3
+
+*.rsu[148].mobility.x = 14357
+*.rsu[148].mobility.y = 19142
+*.rsu[148].mobility.z = 3
+
+*.rsu[149].mobility.x = 15000
+*.rsu[149].mobility.y = 19142
+*.rsu[149].mobility.z = 3
+
+*.rsu[150].mobility.x = 6000
+*.rsu[150].mobility.y = 19714
+*.rsu[150].mobility.z = 3
+
+*.rsu[151].mobility.x = 6642
+*.rsu[151].mobility.y = 19714
+*.rsu[151].mobility.z = 3
+
+*.rsu[152].mobility.x = 7285
+*.rsu[152].mobility.y = 19714
+*.rsu[152].mobility.z = 3
+
+*.rsu[153].mobility.x = 7928
+*.rsu[153].mobility.y = 19714
+*.rsu[153].mobility.z = 3
+
+*.rsu[154].mobility.x = 8571
+*.rsu[154].mobility.y = 19714
+*.rsu[154].mobility.z = 3
+
+*.rsu[155].mobility.x = 9214
+*.rsu[155].mobility.y = 19714
+*.rsu[155].mobility.z = 3
+
+*.rsu[156].mobility.x = 9857
+*.rsu[156].mobility.y = 19714
+*.rsu[156].mobility.z = 3
+
+*.rsu[157].mobility.x = 10500
+*.rsu[157].mobility.y = 19714
+*.rsu[157].mobility.z = 3
+
+*.rsu[158].mobility.x = 11142
+*.rsu[158].mobility.y = 19714
+*.rsu[158].mobility.z = 3
+
+*.rsu[159].mobility.x = 11785
+*.rsu[159].mobility.y = 19714
+*.rsu[159].mobility.z = 3
+
+*.rsu[160].mobility.x = 12428
+*.rsu[160].mobility.y = 19714
+*.rsu[160].mobility.z = 3
+
+*.rsu[161].mobility.x = 13071
+*.rsu[161].mobility.y = 19714
+*.rsu[161].mobility.z = 3
+
+*.rsu[162].mobility.x = 13714
+*.rsu[162].mobility.y = 19714
+*.rsu[162].mobility.z = 3
+
+*.rsu[163].mobility.x = 14357
+*.rsu[163].mobility.y = 19714
+*.rsu[163].mobility.z = 3
+
+*.rsu[164].mobility.x = 15000
+*.rsu[164].mobility.y = 19714
+*.rsu[164].mobility.z = 3
+
+*.rsu[165].mobility.x = 6000
+*.rsu[165].mobility.y = 20285
+*.rsu[165].mobility.z = 3
+
+*.rsu[166].mobility.x = 6642
+*.rsu[166].mobility.y = 20285
+*.rsu[166].mobility.z = 3
+
+*.rsu[167].mobility.x = 7285
+*.rsu[167].mobility.y = 20285
+*.rsu[167].mobility.z = 3
+
+*.rsu[168].mobility.x = 7928
+*.rsu[168].mobility.y = 20285
+*.rsu[168].mobility.z = 3
+
+*.rsu[169].mobility.x = 8571
+*.rsu[169].mobility.y = 20285
+*.rsu[169].mobility.z = 3
+
+*.rsu[170].mobility.x = 9214
+*.rsu[170].mobility.y = 20285
+*.rsu[170].mobility.z = 3
+
+*.rsu[171].mobility.x = 9857
+*.rsu[171].mobility.y = 20285
+*.rsu[171].mobility.z = 3
+
+*.rsu[172].mobility.x = 10500
+*.rsu[172].mobility.y = 20285
+*.rsu[172].mobility.z = 3
+
+*.rsu[173].mobility.x = 11142
+*.rsu[173].mobility.y = 20285
+*.rsu[173].mobility.z = 3
+
+*.rsu[174].mobility.x = 11785
+*.rsu[174].mobility.y = 20285
+*.rsu[174].mobility.z = 3
+
+*.rsu[175].mobility.x = 12428
+*.rsu[175].mobility.y = 20285
+*.rsu[175].mobility.z = 3
+
+*.rsu[176].mobility.x = 13071
+*.rsu[176].mobility.y = 20285
+*.rsu[176].mobility.z = 3
+
+*.rsu[177].mobility.x = 13714
+*.rsu[177].mobility.y = 20285
+*.rsu[177].mobility.z = 3
+
+*.rsu[178].mobility.x = 14357
+*.rsu[178].mobility.y = 20285
+*.rsu[178].mobility.z = 3
+
+*.rsu[179].mobility.x = 15000
+*.rsu[179].mobility.y = 20285
+*.rsu[179].mobility.z = 3
+
+*.rsu[180].mobility.x = 6000
+*.rsu[180].mobility.y = 20857
+*.rsu[180].mobility.z = 3
+
+*.rsu[181].mobility.x = 6642
+*.rsu[181].mobility.y = 20857
+*.rsu[181].mobility.z = 3
+
+*.rsu[182].mobility.x = 7285
+*.rsu[182].mobility.y = 20857
+*.rsu[182].mobility.z = 3
+
+*.rsu[183].mobility.x = 7928
+*.rsu[183].mobility.y = 20857
+*.rsu[183].mobility.z = 3
+
+*.rsu[184].mobility.x = 8571
+*.rsu[184].mobility.y = 20857
+*.rsu[184].mobility.z = 3
+
+*.rsu[185].mobility.x = 9214
+*.rsu[185].mobility.y = 20857
+*.rsu[185].mobility.z = 3
+
+*.rsu[186].mobility.x = 9857
+*.rsu[186].mobility.y = 20857
+*.rsu[186].mobility.z = 3
+
+*.rsu[187].mobility.x = 10500
+*.rsu[187].mobility.y = 20857
+*.rsu[187].mobility.z = 3
+
+*.rsu[188].mobility.x = 11142
+*.rsu[188].mobility.y = 20857
+*.rsu[188].mobility.z = 3
+
+*.rsu[189].mobility.x = 11785
+*.rsu[189].mobility.y = 20857
+*.rsu[189].mobility.z = 3
+
+*.rsu[190].mobility.x = 12428
+*.rsu[190].mobility.y = 20857
+*.rsu[190].mobility.z = 3
+
+*.rsu[191].mobility.x = 13071
+*.rsu[191].mobility.y = 20857
+*.rsu[191].mobility.z = 3
+
+*.rsu[192].mobility.x = 13714
+*.rsu[192].mobility.y = 20857
+*.rsu[192].mobility.z = 3
+
+*.rsu[193].mobility.x = 14357
+*.rsu[193].mobility.y = 20857
+*.rsu[193].mobility.z = 3
+
+*.rsu[194].mobility.x = 15000
+*.rsu[194].mobility.y = 20857
+*.rsu[194].mobility.z = 3
+
+*.rsu[195].mobility.x = 6000
+*.rsu[195].mobility.y = 21428
+*.rsu[195].mobility.z = 3
+
+*.rsu[196].mobility.x = 6642
+*.rsu[196].mobility.y = 21428
+*.rsu[196].mobility.z = 3
+
+*.rsu[197].mobility.x = 7285
+*.rsu[197].mobility.y = 21428
+*.rsu[197].mobility.z = 3
+
+*.rsu[198].mobility.x = 7928
+*.rsu[198].mobility.y = 21428
+*.rsu[198].mobility.z = 3
+
+*.rsu[199].mobility.x = 8571
+*.rsu[199].mobility.y = 21428
+*.rsu[199].mobility.z = 3
+
+
+
+
+
+
+*.rsu[*].applType = "FedLimRSU11p"
+*.rsu[*].appl.headerLength = 80 bit
+*.rsu[*].appl.sendBeacons = true
+*.rsu[*].appl.dataOnSch = false
+*.rsu[*].appl.beaconUserPriority = 7
+*.rsu[*].appl.dataUserPriority = 5
+*.rsu[*].nic.phy80211p.antennaOffsetZ = 0 m
+
+
+*.rsu[*].appl.model = "MLP_COLISAO"
+*.rsu[*].appl.dataset = "ColisaoFederada"
+#*.rsu[*].appl.scenario = "GRID"
+*.rsu[*].appl.seed = 42
+*.rsu[*].appl.nonIID = false
+*.rsu[*].appl.trainFlag = true
+*.rsu[*].appl.epochs = 1
+*.rsu[*].appl.batch = 1024
+*.rsu[*].appl.numClients = 10
+*.rsu[*].appl.strategy = "FED_AVG"
+*.rsu[*].appl.computationRequirement = "900"
+*.rsu[*].appl.roundDeadline = 1.0
+*.rsu[*].appl.K = 0.1
+*.rsu[*].appl.address = "127.0.0.1:5000"
+
+##########################################################
+#            11p specific parameters                     #
+#                                                        #
+#                    NIC-Settings                        #
+##########################################################
+*.connectionManager.sendDirect = true
+*.connectionManager.maxInterfDist = 2600m
+*.connectionManager.drawMaxIntfDist = false
+
+*.**.nic.mac1609_4.useServiceChannel = false
+
+#312 m
+*.node[*].nic.mac1609_4.txPower = 15mW
+*.node[*].nic.mac1609_4.bitrate = 6Mbps
+*.node[*].nic.phy80211p.minPowerLevel = -86dBm
+
+#5726 m
+*.rsu[*].nic.mac1609_4.txPower = 20mW
+*.rsu[*].nic.mac1609_4.bitrate = 6Mbps
+*.rsu[*].nic.phy80211p.minPowerLevel = -110dBm
+
+*.**.nic.phy80211p.useNoiseFloor = true
+*.**.nic.phy80211p.noiseFloor = -98dBm
+
+*.**.nic.phy80211p.decider = xmldoc("config.xml")
+*.**.nic.phy80211p.analogueModels = xmldoc("config.xml")
+*.**.nic.phy80211p.usePropagationDelay = true
+
+*.**.nic.phy80211p.antenna = xmldoc("antenna.xml", "/root/Antenna[@id='monopole']")
+*.node[*].nic.phy80211p.antennaOffsetY = 0 m
+*.node[*].nic.phy80211p.antennaOffsetZ = 1.895 m
+
+##########################################################
+#                      App Layer                         #
+##########################################################
+*.node[*].applType = "MLApp"
+*.node[*].appl.headerLength = 80 bit
+*.node[*].appl.sendBeacons = true
+*.node[*].appl.dataOnSch = false
+*.node[*].appl.beaconInterval = 0.1s
+
+*.node[*].appl.epochs = 5
+*.node[*].appl.batch = 32
+*.node[*].appl.computationCapability = uniform(0.5GHz, 4GHz)
+*.node[*].appl.address = "127.0.0.1:5000"
+*.node[*].appl.speedZero = true
+##########################################################
+#                      Mobility                          #
+##########################################################
+*.node[*].veinsmobility.x = 0
+*.node[*].veinsmobility.y = 0
+*.node[*].veinsmobility.z = 0

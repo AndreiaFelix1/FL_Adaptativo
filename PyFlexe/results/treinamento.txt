@@ -1,0 +1,132 @@
+CLIENT 1 - Tempo de Treinamento: 38.0243 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 1 - Tempo de Teste: 0.9828 segundos
+CLIENT 19 - Tempo de Treinamento: 38.9632 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 19 - Tempo de Teste: 0.9978 segundos
+CLIENT 31 - Tempo de Treinamento: 39.1229 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 31 - Tempo de Teste: 1.4601 segundos
+CLIENT 5 - Tempo de Treinamento: 38.3291 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 5 - Tempo de Teste: 0.9430 segundos
+CLIENT 14 - Tempo de Treinamento: 37.5166 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 14 - Tempo de Teste: 0.9028 segundos
+CLIENT 11 - Tempo de Treinamento: 37.6899 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 11 - Tempo de Teste: 0.9144 segundos
+CLIENT 1 - Tempo de Treinamento: 37.8516 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 1 - Tempo de Teste: 0.8749 segundos
+CLIENT 10 - Tempo de Treinamento: 38.4104 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 10 - Tempo de Teste: 0.9761 segundos
+CLIENT 29 - Tempo de Treinamento: 37.4984 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 29 - Tempo de Teste: 0.9124 segundos
+CLIENT 36 - Tempo de Treinamento: 39.3148 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 36 - Tempo de Teste: 0.9444 segundos
+CLIENT 24 - Tempo de Treinamento: 42.6560 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 24 - Tempo de Teste: 1.1463 segundos
+CLIENT 12 - Tempo de Treinamento: 41.4335 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 12 - Tempo de Teste: 1.0078 segundos
+CLIENT 25 - Tempo de Treinamento: 38.1063 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 25 - Tempo de Teste: 0.9046 segundos
+CLIENT 22 - Tempo de Treinamento: 37.1350 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 22 - Tempo de Teste: 0.9327 segundos
+CLIENT 19 - Tempo de Treinamento: 38.6113 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 19 - Tempo de Teste: 0.9598 segundos
+CLIENT 61 - Tempo de Treinamento: 38.7788 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 61 - Tempo de Teste: 0.9237 segundos
+CLIENT 75 - Tempo de Treinamento: 36.8794 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 75 - Tempo de Teste: 0.9127 segundos
+CLIENT 72 - Tempo de Treinamento: 37.0237 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 72 - Tempo de Teste: 0.8535 segundos
+CLIENT 29 - Tempo de Treinamento: 37.6704 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 29 - Tempo de Teste: 0.9402 segundos
+CLIENT 36 - Tempo de Treinamento: 37.7514 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 36 - Tempo de Teste: 0.9979 segundos
+CLIENT 76 - Tempo de Treinamento: 39.1523 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 76 - Tempo de Teste: 1.0676 segundos
+CLIENT 24 - Tempo de Treinamento: 40.2364 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 24 - Tempo de Teste: 1.0171 segundos
+CLIENT 12 - Tempo de Treinamento: 39.8034 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 12 - Tempo de Teste: 0.9928 segundos
+CLIENT 20 - Tempo de Treinamento: 38.3554 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 20 - Tempo de Teste: 0.9880 segundos
+CLIENT 17 - Tempo de Treinamento: 40.2117 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 17 - Tempo de Teste: 0.9999 segundos
+CLIENT 6 - Tempo de Treinamento: 39.0193 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 6 - Tempo de Teste: 0.9207 segundos
+CLIENT 39 - Tempo de Treinamento: 38.6545 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 39 - Tempo de Teste: 1.0534 segundos
+CLIENT 23 - Tempo de Treinamento: 38.9664 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 23 - Tempo de Teste: 0.9893 segundos
+CLIENT 53 - Tempo de Treinamento: 41.2104 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 53 - Tempo de Teste: 1.1621 segundos
+CLIENT 13 - Tempo de Treinamento: 41.7173 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 13 - Tempo de Teste: 0.9717 segundos
+CLIENT 9 - Tempo de Treinamento: 40.4171 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 9 - Tempo de Teste: 1.0077 segundos
+CLIENT 55 - Tempo de Treinamento: 38.9077 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 55 - Tempo de Teste: 0.9438 segundos
+CLIENT 35 - Tempo de Treinamento: 39.2479 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 35 - Tempo de Teste: 1.0146 segundos
+CLIENT 70 - Tempo de Treinamento: 40.7778 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 70 - Tempo de Teste: 1.2120 segundos
+CLIENT 63 - Tempo de Treinamento: 39.7457 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 63 - Tempo de Teste: 1.0364 segundos
+CLIENT 21 - Tempo de Treinamento: 40.6352 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 21 - Tempo de Teste: 0.9847 segundos
+CLIENT 59 - Tempo de Treinamento: 41.5113 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 59 - Tempo de Teste: 1.0078 segundos
+CLIENT 7 - Tempo de Treinamento: 40.4623 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 7 - Tempo de Teste: 1.0362 segundos
+CLIENT 65 - Tempo de Treinamento: 39.9880 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 65 - Tempo de Teste: 0.9764 segundos
+CLIENT 52 - Tempo de Treinamento: 39.6356 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 52 - Tempo de Teste: 1.0179 segundos
+CLIENT 30 - Tempo de Treinamento: 40.4368 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 30 - Tempo de Teste: 1.0264 segundos
+CLIENT 49 - Tempo de Treinamento: 39.3259 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 49 - Tempo de Teste: 1.0005 segundos
+CLIENT 8 - Tempo de Treinamento: 39.7177 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 8 - Tempo de Teste: 1.0111 segundos
+CLIENT 0 - Tempo de Treinamento: 39.5845 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 0 - Tempo de Teste: 1.1005 segundos
+CLIENT 27 - Tempo de Treinamento: 40.4239 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 27 - Tempo de Teste: 1.0281 segundos
+CLIENT 16 - Tempo de Treinamento: 39.8730 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 16 - Tempo de Teste: 1.0014 segundos
+CLIENT 28 - Tempo de Treinamento: 40.4892 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 28 - Tempo de Teste: 0.9632 segundos
+CLIENT 48 - Tempo de Treinamento: 39.6408 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 48 - Tempo de Teste: 0.9812 segundos
+CLIENT 33 - Tempo de Treinamento: 45.1786 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 33 - Tempo de Teste: 1.0858 segundos
+CLIENT 25 - Tempo de Treinamento: 39.2581 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 25 - Tempo de Teste: 0.9705 segundos
+CLIENT 45 - Tempo de Treinamento: 38.1419 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 45 - Tempo de Teste: 0.9434 segundos
+CLIENT 62 - Tempo de Treinamento: 38.5412 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 62 - Tempo de Teste: 0.9272 segundos
+CLIENT 15 - Tempo de Treinamento: 39.6452 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 15 - Tempo de Teste: 0.9098 segundos
+CLIENT 64 - Tempo de Treinamento: 38.1407 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 64 - Tempo de Teste: 1.0766 segundos
+CLIENT 44 - Tempo de Treinamento: 38.8845 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 44 - Tempo de Teste: 0.9586 segundos
+CLIENT 31 - Tempo de Treinamento: 38.5838 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 31 - Tempo de Teste: 0.9276 segundos
+CLIENT 5 - Tempo de Treinamento: 38.1309 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 5 - Tempo de Teste: 0.9582 segundos
+CLIENT 47 - Tempo de Treinamento: 38.2667 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 47 - Tempo de Teste: 1.0285 segundos
+CLIENT 14 - Tempo de Treinamento: 38.0023 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 14 - Tempo de Teste: 0.9186 segundos
+CLIENT 11 - Tempo de Treinamento: 37.8264 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 11 - Tempo de Teste: 0.9484 segundos
+CLIENT 57 - Tempo de Treinamento: 38.5535 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 57 - Tempo de Teste: 0.9207 segundos
+CLIENT 1 - Tempo de Treinamento: 37.6269 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 1 - Tempo de Teste: 0.9259 segundos
+CLIENT 10 - Tempo de Treinamento: 38.6807 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 10 - Tempo de Teste: 0.9588 segundos
+CLIENT 42 - Tempo de Treinamento: 38.7367 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 42 - Tempo de Teste: 0.9150 segundos
+CLIENT 43 - Tempo de Treinamento: 38.4206 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 43 - Tempo de Teste: 0.9747 segundos
+CLIENT 22 - Tempo de Treinamento: 38.2984 segundos | Bytes Transmitidos: 57568 bytes
+CLIENT 22 - Tempo de Teste: 0.9257 segundos

@@ -18,3 +18,17 @@ Release/
 *.vec
 *.sca
 *.vci
+
+# IDE
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Large local files
+PyFlexe/data/Motion-Sense/x_train.csv
+PyFlexe/results/.csv
+
+# OMNeT++ generated metadata
+omnetpp-5.7/samples/.metadata/

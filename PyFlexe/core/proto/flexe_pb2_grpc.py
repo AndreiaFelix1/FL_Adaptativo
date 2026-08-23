@@ -6,8 +6,7 @@ import core.proto.flexe_pb2 as flexe__pb2
 
 
 class FlexeStub(object):
-    """Defines the service
-    """
+    """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
         """Constructor.
@@ -23,53 +22,92 @@ class FlexeStub(object):
         self.evaluate = channel.unary_unary(
                 '/flexe.Flexe/evaluate',
                 request_serializer=flexe__pb2.TTRequest.SerializeToString,
-                response_deserializer=flexe__pb2.EvaluateReply.FromString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
                 )
         self.update_model = channel.unary_unary(
                 '/flexe.Flexe/update_model',
                 request_serializer=flexe__pb2.TTRequest.SerializeToString,
-                response_deserializer=flexe__pb2.GenericResponse.FromString,
-                )
-        self.aggregate_evaluate = channel.unary_unary(
-                '/flexe.Flexe/aggregate_evaluate',
-                request_serializer=flexe__pb2.TTRequest.SerializeToString,
-                response_deserializer=flexe__pb2.EvaluateReply.FromString,
-                )
-        self.aggregate_fit = channel.unary_unary(
-                '/flexe.Flexe/aggregate_fit',
-                request_serializer=flexe__pb2.ModelRequest.SerializeToString,
                 response_deserializer=flexe__pb2.ModelReply.FromString,
                 )
-        self.aggregate_sync_fit = channel.unary_unary(
-                '/flexe.Flexe/aggregate_sync_fit',
+        self.get_information = channel.unary_unary(
+                '/flexe.Flexe/get_information',
                 request_serializer=flexe__pb2.GenericRequest.SerializeToString,
                 response_deserializer=flexe__pb2.ModelReply.FromString,
                 )
-        self.server_evaluate = channel.unary_unary(
-                '/flexe.Flexe/server_evaluate',
-                request_serializer=flexe__pb2.TTRequest.SerializeToString,
-                response_deserializer=flexe__pb2.EvaluateReply.FromString,
+        self.set_information = channel.unary_unary(
+                '/flexe.Flexe/set_information',
+                request_serializer=flexe__pb2.GenericRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
                 )
-        self.store_model = channel.unary_unary(
-                '/flexe.Flexe/store_model',
-                request_serializer=flexe__pb2.ModelRequest.SerializeToString,
-                response_deserializer=flexe__pb2.GenericResponse.FromString,
+        self.aggregate_client = channel.unary_unary(
+                '/flexe.Flexe/aggregate_client',
+                request_serializer=flexe__pb2.TTRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.fit_all = channel.unary_unary(
+                '/flexe.Flexe/fit_all',
+                request_serializer=flexe__pb2.TTRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.evaluate_all = channel.unary_unary(
+                '/flexe.Flexe/evaluate_all',
+                request_serializer=flexe__pb2.TTRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.update_all = channel.unary_unary(
+                '/flexe.Flexe/update_all',
+                request_serializer=flexe__pb2.TTRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
                 )
         self.initialize_parameters = channel.unary_unary(
                 '/flexe.Flexe/initialize_parameters',
                 request_serializer=flexe__pb2.TTRequest.SerializeToString,
                 response_deserializer=flexe__pb2.ModelReply.FromString,
                 )
+        self.aggregate_async_fit = channel.unary_unary(
+                '/flexe.Flexe/aggregate_async_fit',
+                request_serializer=flexe__pb2.AggregationRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.aggregate_sync_fit = channel.unary_unary(
+                '/flexe.Flexe/aggregate_sync_fit',
+                request_serializer=flexe__pb2.AggregationRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.aggregate_evaluate = channel.unary_unary(
+                '/flexe.Flexe/aggregate_evaluate',
+                request_serializer=flexe__pb2.AggregationRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.set_strategy = channel.unary_unary(
+                '/flexe.Flexe/set_strategy',
+                request_serializer=flexe__pb2.GenericRequest.SerializeToString,
+                response_deserializer=flexe__pb2.GenericReply.FromString,
+                )
+        self.get_strategy = channel.unary_unary(
+                '/flexe.Flexe/get_strategy',
+                request_serializer=flexe__pb2.GenericRequest.SerializeToString,
+                response_deserializer=flexe__pb2.GenericReply.FromString,
+                )
+        self.center_fit = channel.unary_unary(
+                '/flexe.Flexe/center_fit',
+                request_serializer=flexe__pb2.GenericRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
+        self.center_evaluate = channel.unary_unary(
+                '/flexe.Flexe/center_evaluate',
+                request_serializer=flexe__pb2.GenericRequest.SerializeToString,
+                response_deserializer=flexe__pb2.ModelReply.FromString,
+                )
         self.end = channel.unary_unary(
                 '/flexe.Flexe/end',
                 request_serializer=flexe__pb2.GenericRequest.SerializeToString,
-                response_deserializer=flexe__pb2.GenericResponse.FromString,
+                response_deserializer=flexe__pb2.GenericReply.FromString,
                 )
 
 
 class FlexeServicer(object):
-    """Defines the service
-    """
+    """Missing associated documentation comment in .proto file."""
 
     def fit(self, request, context):
         """Client Functions 
@@ -90,14 +128,50 @@ class FlexeServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def aggregate_evaluate(self, request, context):
+    def get_information(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def set_information(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def aggregate_client(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def fit_all(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def evaluate_all(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def update_all(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def initialize_parameters(self, request, context):
         """Server Functions
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def aggregate_fit(self, request, context):
+    def aggregate_async_fit(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -109,19 +183,31 @@ class FlexeServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def server_evaluate(self, request, context):
+    def aggregate_evaluate(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def store_model(self, request, context):
+    def set_strategy(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def initialize_parameters(self, request, context):
+    def get_strategy(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def center_fit(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def center_evaluate(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -144,47 +230,87 @@ def add_FlexeServicer_to_server(servicer, server):
             'evaluate': grpc.unary_unary_rpc_method_handler(
                     servicer.evaluate,
                     request_deserializer=flexe__pb2.TTRequest.FromString,
-                    response_serializer=flexe__pb2.EvaluateReply.SerializeToString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
             ),
             'update_model': grpc.unary_unary_rpc_method_handler(
                     servicer.update_model,
                     request_deserializer=flexe__pb2.TTRequest.FromString,
-                    response_serializer=flexe__pb2.GenericResponse.SerializeToString,
-            ),
-            'aggregate_evaluate': grpc.unary_unary_rpc_method_handler(
-                    servicer.aggregate_evaluate,
-                    request_deserializer=flexe__pb2.TTRequest.FromString,
-                    response_serializer=flexe__pb2.EvaluateReply.SerializeToString,
-            ),
-            'aggregate_fit': grpc.unary_unary_rpc_method_handler(
-                    servicer.aggregate_fit,
-                    request_deserializer=flexe__pb2.ModelRequest.FromString,
                     response_serializer=flexe__pb2.ModelReply.SerializeToString,
             ),
-            'aggregate_sync_fit': grpc.unary_unary_rpc_method_handler(
-                    servicer.aggregate_sync_fit,
+            'get_information': grpc.unary_unary_rpc_method_handler(
+                    servicer.get_information,
                     request_deserializer=flexe__pb2.GenericRequest.FromString,
                     response_serializer=flexe__pb2.ModelReply.SerializeToString,
             ),
-            'server_evaluate': grpc.unary_unary_rpc_method_handler(
-                    servicer.server_evaluate,
-                    request_deserializer=flexe__pb2.TTRequest.FromString,
-                    response_serializer=flexe__pb2.EvaluateReply.SerializeToString,
+            'set_information': grpc.unary_unary_rpc_method_handler(
+                    servicer.set_information,
+                    request_deserializer=flexe__pb2.GenericRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
             ),
-            'store_model': grpc.unary_unary_rpc_method_handler(
-                    servicer.store_model,
-                    request_deserializer=flexe__pb2.ModelRequest.FromString,
-                    response_serializer=flexe__pb2.GenericResponse.SerializeToString,
+            'aggregate_client': grpc.unary_unary_rpc_method_handler(
+                    servicer.aggregate_client,
+                    request_deserializer=flexe__pb2.TTRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'fit_all': grpc.unary_unary_rpc_method_handler(
+                    servicer.fit_all,
+                    request_deserializer=flexe__pb2.TTRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'evaluate_all': grpc.unary_unary_rpc_method_handler(
+                    servicer.evaluate_all,
+                    request_deserializer=flexe__pb2.TTRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'update_all': grpc.unary_unary_rpc_method_handler(
+                    servicer.update_all,
+                    request_deserializer=flexe__pb2.TTRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
             ),
             'initialize_parameters': grpc.unary_unary_rpc_method_handler(
                     servicer.initialize_parameters,
                     request_deserializer=flexe__pb2.TTRequest.FromString,
                     response_serializer=flexe__pb2.ModelReply.SerializeToString,
             ),
+            'aggregate_async_fit': grpc.unary_unary_rpc_method_handler(
+                    servicer.aggregate_async_fit,
+                    request_deserializer=flexe__pb2.AggregationRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'aggregate_sync_fit': grpc.unary_unary_rpc_method_handler(
+                    servicer.aggregate_sync_fit,
+                    request_deserializer=flexe__pb2.AggregationRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'aggregate_evaluate': grpc.unary_unary_rpc_method_handler(
+                    servicer.aggregate_evaluate,
+                    request_deserializer=flexe__pb2.AggregationRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'set_strategy': grpc.unary_unary_rpc_method_handler(
+                    servicer.set_strategy,
+                    request_deserializer=flexe__pb2.GenericRequest.FromString,
+                    response_serializer=flexe__pb2.GenericReply.SerializeToString,
+            ),
+            'get_strategy': grpc.unary_unary_rpc_method_handler(
+                    servicer.get_strategy,
+                    request_deserializer=flexe__pb2.GenericRequest.FromString,
+                    response_serializer=flexe__pb2.GenericReply.SerializeToString,
+            ),
+            'center_fit': grpc.unary_unary_rpc_method_handler(
+                    servicer.center_fit,
+                    request_deserializer=flexe__pb2.GenericRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
+            'center_evaluate': grpc.unary_unary_rpc_method_handler(
+                    servicer.center_evaluate,
+                    request_deserializer=flexe__pb2.GenericRequest.FromString,
+                    response_serializer=flexe__pb2.ModelReply.SerializeToString,
+            ),
             'end': grpc.unary_unary_rpc_method_handler(
                     servicer.end,
                     request_deserializer=flexe__pb2.GenericRequest.FromString,
-                    response_serializer=flexe__pb2.GenericResponse.SerializeToString,
+                    response_serializer=flexe__pb2.GenericReply.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -194,8 +320,7 @@ def add_FlexeServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Flexe(object):
-    """Defines the service
-    """
+    """Missing associated documentation comment in .proto file."""
 
     @staticmethod
     def fit(request,
@@ -227,7 +352,7 @@ class Flexe(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/evaluate',
             flexe__pb2.TTRequest.SerializeToString,
-            flexe__pb2.EvaluateReply.FromString,
+            flexe__pb2.ModelReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -244,46 +369,12 @@ class Flexe(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/update_model',
             flexe__pb2.TTRequest.SerializeToString,
-            flexe__pb2.GenericResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def aggregate_evaluate(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_evaluate',
-            flexe__pb2.TTRequest.SerializeToString,
-            flexe__pb2.EvaluateReply.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def aggregate_fit(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_fit',
-            flexe__pb2.ModelRequest.SerializeToString,
             flexe__pb2.ModelReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def aggregate_sync_fit(request,
+    def get_information(request,
             target,
             options=(),
             channel_credentials=None,
@@ -293,14 +384,14 @@ class Flexe(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_sync_fit',
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/get_information',
             flexe__pb2.GenericRequest.SerializeToString,
             flexe__pb2.ModelReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def server_evaluate(request,
+    def set_information(request,
             target,
             options=(),
             channel_credentials=None,
@@ -310,14 +401,14 @@ class Flexe(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/server_evaluate',
-            flexe__pb2.TTRequest.SerializeToString,
-            flexe__pb2.EvaluateReply.FromString,
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/set_information',
+            flexe__pb2.GenericRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def store_model(request,
+    def aggregate_client(request,
             target,
             options=(),
             channel_credentials=None,
@@ -327,9 +418,60 @@ class Flexe(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/store_model',
-            flexe__pb2.ModelRequest.SerializeToString,
-            flexe__pb2.GenericResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_client',
+            flexe__pb2.TTRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def fit_all(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/fit_all',
+            flexe__pb2.TTRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def evaluate_all(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/evaluate_all',
+            flexe__pb2.TTRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def update_all(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/update_all',
+            flexe__pb2.TTRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -351,6 +493,125 @@ class Flexe(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def aggregate_async_fit(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_async_fit',
+            flexe__pb2.AggregationRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def aggregate_sync_fit(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_sync_fit',
+            flexe__pb2.AggregationRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def aggregate_evaluate(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/aggregate_evaluate',
+            flexe__pb2.AggregationRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def set_strategy(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/set_strategy',
+            flexe__pb2.GenericRequest.SerializeToString,
+            flexe__pb2.GenericReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def get_strategy(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/get_strategy',
+            flexe__pb2.GenericRequest.SerializeToString,
+            flexe__pb2.GenericReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def center_fit(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/center_fit',
+            flexe__pb2.GenericRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def center_evaluate(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/center_evaluate',
+            flexe__pb2.GenericRequest.SerializeToString,
+            flexe__pb2.ModelReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def end(request,
             target,
             options=(),
@@ -363,6 +624,6 @@ class Flexe(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/flexe.Flexe/end',
             flexe__pb2.GenericRequest.SerializeToString,
-            flexe__pb2.GenericResponse.FromString,
+            flexe__pb2.GenericReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

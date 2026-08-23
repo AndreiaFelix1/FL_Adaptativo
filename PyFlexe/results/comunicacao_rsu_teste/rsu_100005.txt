@@ -1,0 +1,98 @@
+Tipo: ENVIO | Node: RSU_100005 | MsgID: 5506 | Tempo: 21605.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.979347 | Latency: 0.000255 | Node: Vehicle_19 | MsgID: 2625 | Tempo: 21625.1
+Tipo: COMMUNICATION_METRICS | Round: 1 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_2 | MsgID: -1 | Tempo: 21665.1
+Tipo: COMMUNICATION_METRICS | Round: 1 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_3 | MsgID: -1 | Tempo: 21665.1
+Tipo: COMMUNICATION_METRICS | Round: 1 | Sent: 0 | Received: 1 | PDR: 0.000000 | AvgLatency: 0.000255 | Node: Vehicle_19 | MsgID: -1 | Tempo: 21665.1
+Tipo: DATA_QUALITY | Round: 1 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_2 | MsgID: -1 | Tempo: 21665.1
+Tipo: DATA_QUALITY | Round: 1 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_3 | MsgID: -1 | Tempo: 21665.1
+Tipo: DATA_QUALITY | Round: 1 | F1: 0.979347 | PDR: 0.000000 | LatencyScore: 0.999745 | DQScore: 0.739610 | Node: Vehicle_19 | MsgID: -1 | Tempo: 21665.1
+Tipo: ENVIO | Node: RSU_100005 | MsgID: 2698979 | Tempo: 21665.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.979015 | Latency: 0.000263 | Node: Vehicle_25 | MsgID: 15538 | Tempo: 21665.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.979347 | Latency: 0.000248 | Node: Vehicle_22 | MsgID: 25123 | Tempo: 21685.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.984586 | Latency: 0.000549 | Node: Vehicle_19 | MsgID: 25124 | Tempo: 21685.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_2 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_3 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_4 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_15 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_18 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000549 | Node: Vehicle_19 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000248 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000263 | Node: Vehicle_25 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_26 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_34 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_37 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_38 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_40 | MsgID: -1 | Tempo: 21725.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_41 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_2 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_3 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_4 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_15 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_18 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.984586 | PDR: 1.000000 | LatencyScore: 0.999451 | DQScore: 0.992156 | Node: Vehicle_19 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.979347 | PDR: 1.000000 | LatencyScore: 0.999752 | DQScore: 0.989611 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.979015 | PDR: 1.000000 | LatencyScore: 0.999737 | DQScore: 0.989442 | Node: Vehicle_25 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_26 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_34 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_37 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_38 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_40 | MsgID: -1 | Tempo: 21725.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_41 | MsgID: -1 | Tempo: 21725.1
+Tipo: ENVIO | Node: RSU_100005 | MsgID: 13509503 | Tempo: 21725.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.981147 | Latency: 0.000310 | Node: Vehicle_65 | MsgID: 50314 | Tempo: 21725.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.984586 | Latency: 0.000260 | Node: Vehicle_22 | MsgID: 67157 | Tempo: 21745.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_2 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_3 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_4 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_15 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_18 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_19 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000260 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_25 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_26 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_34 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_37 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_38 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_40 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_41 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_45 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_46 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_50 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_54 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_60 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_62 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_64 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000310 | Node: Vehicle_65 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_67 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_68 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_69 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_73 | MsgID: -1 | Tempo: 21785.1
+Tipo: COMMUNICATION_METRICS | Round: 3 | Sent: 1 | Received: 0 | PDR: 0.000000 | AvgLatency: 0.000000 | Node: Vehicle_77 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_2 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_3 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_4 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_15 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_18 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.984586 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.742293 | Node: Vehicle_19 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.984586 | PDR: 1.000000 | LatencyScore: 0.999740 | DQScore: 0.992228 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.979015 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.739508 | Node: Vehicle_25 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_26 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_34 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_37 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_38 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_40 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_41 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_45 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_46 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_50 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_54 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_60 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_62 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_64 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.981147 | PDR: 1.000000 | LatencyScore: 0.999690 | DQScore: 0.990496 | Node: Vehicle_65 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_67 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_68 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_69 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_73 | MsgID: -1 | Tempo: 21785.1
+Tipo: DATA_QUALITY | Round: 3 | F1: 0.000000 | PDR: 0.000000 | LatencyScore: 1.000000 | DQScore: 0.250000 | Node: Vehicle_77 | MsgID: -1 | Tempo: 21785.1
+Tipo: ENVIO | Node: RSU_100005 | MsgID: 41050119 | Tempo: 21785.1

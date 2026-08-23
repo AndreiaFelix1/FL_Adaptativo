@@ -1,0 +1,2 @@
+SENT | MsgID: 30420 | Time: 21694.092459
+REC | From: 100007 | MsgID: 0 | Time: 21694.100283

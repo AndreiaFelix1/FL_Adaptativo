@@ -1,0 +1,9 @@
+Tipo: ENVIO | Node: RSU_100001 | MsgID: 409102 | Tempo: 21630.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.979347 | Latency: 0.000266 | Node: Vehicle_22 | MsgID: 25123 | Tempo: 21685.1
+Tipo: COMMUNICATION_METRICS | Round: 1 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000266 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21690.1
+Tipo: DATA_QUALITY | Round: 1 | F1: 0.979347 | PDR: 1.000000 | LatencyScore: 0.999734 | DQScore: 0.989607 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21690.1
+Tipo: ENVIO | Node: RSU_100001 | MsgID: 5966837 | Tempo: 21690.1
+Tipo: MODEL_LOCAL_RECEIVE | F1: 0.984586 | Latency: 0.000277 | Node: Vehicle_22 | MsgID: 67157 | Tempo: 21745.1
+Tipo: COMMUNICATION_METRICS | Round: 2 | Sent: 1 | Received: 1 | PDR: 1.000000 | AvgLatency: 0.000277 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21750.1
+Tipo: DATA_QUALITY | Round: 2 | F1: 0.984586 | PDR: 1.000000 | LatencyScore: 0.999723 | DQScore: 0.992224 | Node: Vehicle_22 | MsgID: -1 | Tempo: 21750.1
+Tipo: ENVIO | Node: RSU_100001 | MsgID: 22772958 | Tempo: 21750.1

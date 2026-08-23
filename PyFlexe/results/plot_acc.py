@@ -14,7 +14,8 @@ dict_rsu_round = {}
 dict_rsu_ids = {}
 dict_rsu_wsm = {}
 
-RESULT_SCENARIO = "01_SIGN_IID"
+#RESULT_SCENARIO = "01_SIGN_IID"
+RESULT_SCENARIO = "SIGN"
 
 #RESULT_SCENARIO = "05_SIGN_IID"
 #RESULT_SCENARIO = "05_SIGN_NONIID"
@@ -199,7 +200,7 @@ plt.savefig("./"+RESULT_SCENARIO+"_loss_bar.png", format='png', dpi=200, bbox_in
 
 
 #################################################################################################
-if RESULT_SCENARIO == "01_SIGN_IID":
+if RESULT_SCENARIO == "SIGN":
     plt.clf()
     plt.cla()
     plt.close()
@@ -591,7 +592,7 @@ if RESULT_SCENARIO == "01_SIGN_IID":
     plt.savefig("./"+RESULT_SCENARIO+"_MEDIUM_loss_line.png", format='png', dpi=200, bbox_inches='tight', pad_inches=0.05)
     #################################################################################################
 
-if RESULT_SCENARIO == "01_FMNIST_IID":
+if RESULT_SCENARIO == "FMNIST":
     plt.clf()
     plt.cla()
     plt.close()
@@ -3338,6 +3339,8 @@ new_x=[0, 40, 80, 120, 160]
 plt.xticks(new_x, labels=["08:00", "08:15", "08:30", "08:45", "09:00"])
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.2), fancybox=False, shadow=False, ncol=2, fontsize=18)
 plt.grid(linestyle=':', linewidth='0.5')
+
+plt.yscale("log")
 
 plt.savefig("./"+RESULT_SCENARIO+"_HIGH_cumsum_line.eps", format="eps", transparent=True, dpi=200, bbox_inches='tight', pad_inches=0.05)
 plt.savefig("./"+RESULT_SCENARIO+"_HIGH_cumsum_line.png", format='png', dpi=200, bbox_inches='tight', pad_inches=0.05)
